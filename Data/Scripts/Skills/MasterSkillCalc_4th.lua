@@ -95,8 +95,18 @@ function FireSlash_4thEnchant_Gladiator(InDamage, Strength, Energy, BarrageCount
 	return OutDamage
 end
 
-function WindSoul_4thEnchant_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
-	local OutDamage = InDamage * (Energy / 25 + 200) / 100
+function WindSoul_4thEnchant_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command, BarrageCount)
+	local OutDamage = 0
+	
+	if (BarrageCount == 1) then
+        OutDamage = InDamage * (Energy / 25 + 200) / 100
+    elseif (BarrageCount == 2) then
+        OutDamage = InDamage * (Energy / 25 + 200) / 100
+    elseif (BarrageCount == 3) then
+        OutDamage = InDamage * (Energy / 25 + 200) / 100
+    elseif (BarrageCount == 4) then
+        OutDamage = InDamage * (Energy / 25 + 200) / 100
+    end
 	
 	return OutDamage
 end

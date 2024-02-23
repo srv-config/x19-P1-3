@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -48,6 +48,7 @@
 //
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
+
 
 <ClassQuest>
 	<QuestInfo Index="0" Type="2" SubType="235" Name="Locate the Scroll of the Emperor!">
@@ -188,6 +189,61 @@
 		<QuestCondition>
 			<Condition Type="-1" Index="8" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="200" />
 			<Condition Type="-1" Index="-1" MinLevel="800" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="10" Type="2" SubType="941" Name="5th Class - New Power Nuke">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="937" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="937" DropRate="0" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="9" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="232" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="11" Type="2" SubType="941" Name="5th Class - New Power Bolt">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="937" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="937" DropRate="0" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="10" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="238" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="12" Type="2" SubType="941" Name="5th Class - New Power Wide Area">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="937" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="937" DropRate="0" RewardType="207" RewardSubType="200" RewardCount="200" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="11" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="244" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="13" Type="2" SubType="941" Name="5th Class - Giant Mount (1)">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="22" ItemLevel="0" ItemCount="300" MonsterMinLevel="-1" MonsterMaxLevel="44" DropRate="500" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="12" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="253" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="14" Type="2" SubType="941" Name="5th Class - Giant Mount (2)">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="938" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="938" DropRate="0" RewardType="208" RewardSubType="0" RewardCount="1" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="13" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="254" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
 		</QuestCondition>
 	</QuestInfo>
 </ClassQuest>

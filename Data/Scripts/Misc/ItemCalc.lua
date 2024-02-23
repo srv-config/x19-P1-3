@@ -26,6 +26,7 @@ ITEM_KIND_B_CCF_WING = 60
 ITEM_KIND_B_GOLDCOLOSSUS_WING = 62
 ITEM_KIND_B_WING_4TH = 76
 ITEM_KIND_B_POWER_WING = 80
+ITEM_KIND_B_WING_5TH = 106
 	
 function MakeItemID(ItemType, ItemIndex)
 	return ItemType * 512 + ItemIndex;
@@ -75,8 +76,8 @@ function Wings_CalcAbsorb(WingID, WingLevel, WingKindB, MLS_WingOption)
 		OutAbsorb = 71
 	elseif (WingKindB == ITEM_KIND_B_GOLDCOLOSSUS_WING) then
 		OutAbsorb = 60 + WingLevel
-	elseif (WingKindB == ITEM_KIND_B_WING_4TH) then
-		if (WingID == MakeItemID(12,418) or WingID == MakeItemID(12,442)) then
+	elseif (WingKindB == ITEM_KIND_B_WING_4TH or WingKindB == ITEM_KIND_B_WING_5TH) then
+		if (WingID == MakeItemID(12,418) or WingID == MakeItemID(12,442) or WingID == MakeItemID(12,184)) then
 			BaseValue = 37
 		else
 			BaseValue = 43
@@ -126,7 +127,7 @@ function Wings_CalcIncAttack(WingID, WingLevel, WingKindB)
 		OutIncAttack = 71
 	elseif (WingKindB == ITEM_KIND_B_GOLDCOLOSSUS_WING) then
 		OutIncAttack = 60 + WingLevel
-	elseif (WingKindB == ITEM_KIND_B_WING_4TH) then
+	elseif (WingKindB == ITEM_KIND_B_WING_4TH or WingKindB == ITEM_KIND_B_WING_5TH) then
 		OutIncAttack = 55 + WingLevel
 	elseif (WingKindB == ITEM_KIND_B_POWER_WING) then
 		OutIncAttack = 65

@@ -930,40 +930,71 @@ function CalcDarkHorseDefenseBonus(Dexterity, PetLevel)
  return AddDefense
 end
 
--- Fourth Class Character Damage calc from user
-function Calc4thClassDamageFromUser(UserLevel, UserMasterLevel, MonsterLevel, PenaltyMonsterAddLevel, InDamage)
-	local SumUserLevel = UserLevel + UserMasterLevel
-	local SumMonLevel = MonsterLevel + PenaltyMonsterAddLevel
-	local LevelDiff = SumMonLevel - SumUserLevel
-	local OutDamage = InDamage
-	
-	if LevelDiff <= 0 then
-		return OutDamage
-	end
-		
-	if (LevelDiff > 7) then
-		LevelDiff = 7
-	end
-		
-	OutDamage = OutDamage - (OutDamage * (LevelDiff * 10) / 100)
-	return OutDamage
+-- Penalty Damage calculation from user, Damage Correction of Monster is configured from MonsterList.xml
+function CalcPenaltyDamageFromUser(UserLevel, UserMasterLevel, UserDamageCorrection, MonsterLevel, PenaltyMonsterAddLevel, MonsterDamageCorrection, InDamage)
+    local SumUserLevel = UserLevel + UserMasterLevel
+    local SumMonLevel = MonsterLevel + PenaltyMonsterAddLevel
+    local LevelDiff = SumMonLevel - SumUserLevel
+    local DamageCorrectionDiff = MonsterDamageCorrection - UserDamageCorrection
+    local OutDamage = InDamage
+
+    if LevelDiff <= 0 then
+        return OutDamage
+    end
+
+    if (LevelDiff > 7) then
+        LevelDiff = 7
+    end
+
+    if DamageCorrectionDiff < 0 then
+        DamageCorrectionDiff = 0
+    end
+
+    OutDamage = OutDamage - (OutDamage * ((LevelDiff * 10) + DamageCorrectionDiff) / 100)
+    return OutDamage
 end
 
--- Fourth Class Character Damage calc from monster
-function Calc4thClassDamageFromMonster(UserLevel, UserMasterLevel, MonsterLevel, PenaltyMonsterAddLevel, InDamage)
-	local SumUserLevel = UserLevel + UserMasterLevel
-	local SumMonLevel = MonsterLevel + PenaltyMonsterAddLevel
-	local LevelDiff = SumMonLevel - SumUserLevel
-	local OutDamage = InDamage
+-- Penalty Damage calculation from monster, Damage Correction of Monster is configured from MonsterList.xml
+function CalcPenaltyDamageFromMonster(UserLevel, UserMasterLevel, UserDamageCorrection, MonsterLevel, PenaltyMonsterAddLevel, MonsterDamageCorrection, InDamage)
+    local SumUserLevel = UserLevel + UserMasterLevel
+    local SumMonLevel = MonsterLevel + PenaltyMonsterAddLevel
+    local LevelDiff = SumMonLevel - SumUserLevel
+    local DamageCorrectionDiff = MonsterDamageCorrection - UserDamageCorrection
+    local OutDamage = InDamage
+
+    if LevelDiff <= 0 then
+        return OutDamage
+    end
+
+    if LevelDiff > 7 then
+        LevelDiff = 7
+    end
+
+    if DamageCorrectionDiff < 0 then
+        DamageCorrectionDiff = 0
+    end
+
+    OutDamage = OutDamage + (OutDamage * ((LevelDiff * 10) + DamageCorrectionDiff) / 100)
+    return OutDamage
+end
+
+function ExtraDamageCalc(UserLevel, UserMasterLevel, MonsterLevel, Class, Strength, Dexterity, Vitality, Energy, InDamageMin, InDamageMax)
+	local OutDamageMin = InDamageMin
+	local OutDamageMax = InDamageMax
 	
-	if LevelDiff <= 0 then
-		return OutDamage
+	return OutDamageMin, OutDamageMax
+end
+
+function ExtraDamageTypeCalc(InDamage, ExtraDamageType)
+	local OutDamage = 0
+	
+	if (ExtraDamageType == 0) then
+		OutDamage = InDamage * 1.0
+	elseif (ExtraDamageType == 1) then
+		OutDamage = InDamage * 0.6
+	elseif (ExtraDamageType == 2) then
+		OutDamage = InDamage * 0.3
 	end
-		
-	if LevelDiff > 7 then
-		LevelDiff = 7
-	end
-		
-	OutDamage = OutDamage + (OutDamage * (LevelDiff * 10) / 100)
+	
 	return OutDamage
-end																					   
+end

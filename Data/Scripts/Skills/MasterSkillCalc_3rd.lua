@@ -1202,12 +1202,6 @@ function StrikeOfDestructionCalc_MasterLevel2_Knight(InDamage, Strength, Dexteri
 	return OutDamage
 end
 
--- SkillID: 810, Strong Belief Strengthener
-function KnightStrongBelief_MasterLevel1(NormalLevel, MasterLevel, Strength, Dexterity, Vitality, Energy)
-	local Duration = (NormalLevel + MasterLevel) / 4 + 20
-	return Duration
-end
-
 -- SkillID: 811, Tornado Cutting Strengthener
 function TorandoCuttingCalc_Level1(InDamage, Strength, Dexterity, Vitality, Energy)
 	local OutDamage = InDamage * (Energy / 10 + 200) / 100

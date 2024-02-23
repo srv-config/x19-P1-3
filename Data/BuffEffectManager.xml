@@ -252,10 +252,10 @@
 		<Buff Index="214" EffectType="120" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Evasion" Description="Increases your block chance and makes you immune to immobilizing effect" />
 		<Buff Index="215" EffectType="119" ItemType="-1" ItemIndex="-1" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Internet Cafe" Description="Extra XP/Chaos Castle in PC Cafe/Acesss to Kalima/Accum. Gob. Pts./Stam. Sys. Disabled" />
 		<Buff Index="216" EffectType="121" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Circle Shield" Description="Chance to decrease opponent's AG by 10" />
-		<Buff Index="217" EffectType="122" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Obsidian" Description="Increases yours and party members' skill damage" />
+		<Buff Index="217" EffectType="122" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Obsidian" Description="Increases skill attack power by %d" />
 		<Buff Index="218" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Wrath" Description="Decreases Defense by 30%, increases Damage by 50%" />
 		<Buff Index="219" EffectType="124" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Burst" Description="Increases chance of True Damage" />
-		<Buff Index="220" EffectType="122" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Obsidian PowUp" Description="Increases yours and party members' skill damage" />
+		<Buff Index="220" EffectType="122" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Obsidian PowUp" Description="Increases skill attack power by %d" />
 		<Buff Index="221" EffectType="121" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Circle Shield PowUp" Description="Chance to increase AG reduce effect by %d on hit." />
 		<Buff Index="222" EffectType="121" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Circle Shield Mastery" Description="Chance to increase AG reduce effect by %d on hit." />
 		<Buff Index="223" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Wrath PowUp" Description="Decreases Defense by 30%, increases Damage by 50%" />
@@ -445,6 +445,9 @@
 		<Buff Index="418" EffectType="331" ItemType="12" ItemIndex="93" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Ur" Description="Guardian mount item" />
 		<Buff Index="419" EffectType="332" ItemType="12" ItemIndex="94" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Ur (Rare)" Description="Guardian mount item" />
 		<Buff Index="420" EffectType="333" ItemType="14" ItemIndex="366" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Piece of Pizza" Description="Gains an additional 50% of base EXP/Increases attack speed by 10." />
+		<Buff Index="421" EffectType="334" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Extra Nuke Damage" Description="Extra Nuke damage can be inflicted when attacking." />
+		<Buff Index="422" EffectType="335" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Extra Bolt Damage" Description="Extra Bolt damage can be inflicted when attacking." />
+		<Buff Index="423" EffectType="336" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Extra Wide Area Damage" Description="Extra Wide Area damage can be inflicted when attacking." />
 		<Buff Index="424" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wrath" Description="Attack and combat power increase. Defense decreases." />	
 		<Buff Index="425" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wrath Strengthener" Description="Attack and combat power increase. Defense decreases." />
 		<Buff Index="426" EffectType="116" ItemType="14" ItemIndex="69" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[PC Room] Blessing of Light (Advanced)" Description="You are blessed with experience/acquire an additional 200% of the base experience." />

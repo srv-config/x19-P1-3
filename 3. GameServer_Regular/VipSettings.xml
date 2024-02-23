@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -94,6 +94,14 @@
 //	Third: Combination max success rate of third type wings
 //	Fourth: Combination max success rate of fourth type wings
 //
+// ### VipSystem::VipTypes::GiantTypeAwardRate::Giant ###
+//	Type: Type of giant
+//		~ 1: Type 1 giant
+//		~ 2: Type 2 giant
+//		~ 3: Type 3 giant
+//
+//	Rate: Chance rate of getting specific giant, weight based, sum of all rates is total, rate/total
+//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ NOTE: Below configuration is proposed example, system is allowing to define own VIP types and names.
 //~~ Modifying VIP types requires to apply the changes in Essential Tools -> VipSettings.xml file.
@@ -117,8 +125,13 @@
 				<Enhanced Level10="50" Level11="50" Level12="50" Level13="45" Level14="45" Level15="40" AddLuck="25" />
 				<Socket Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" SocketWeapon="40" />
 				<Pentagram Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" />
-				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24"/>
+				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24" Fifth_Relic="24" />
 			</ChaosBoxMixRates>
+			<GiantTypeAwardRate>
+				<Giant Type="1" Rate="5000" />
+				<Giant Type="2" Rate="3000" />
+				<Giant Type="3" Rate="2000" />
+			</GiantTypeAwardRate>
 		</Vip>
 		<Vip Type="2" Name="Silver" ML_MonsterMinLevel="95" MJ_MonsterMinLevel="160" PointPerResetBonus="100" NightStartHour="22" NightStartMinute="0" NightEndHour="7" NightEndMinute="30">
 			<Day ExpBonus="0.0" DropBonus="0" MasterExpBonus="0.0" MasterDropBonus="0" MajesticExpBonus="0.0" MajesticDropBonus="0" OffLevelExp="1.0" />
@@ -129,8 +142,13 @@
 				<Enhanced Level10="50" Level11="50" Level12="50" Level13="45" Level14="45" Level15="40" AddLuck="25" />
 				<Socket Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" SocketWeapon="40" />
 				<Pentagram Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" />
-				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24"/>
+				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24" Fifth_Relic="24" />
 			</ChaosBoxMixRates>
+			<GiantTypeAwardRate>
+				<Giant Type="1" Rate="5000" />
+				<Giant Type="2" Rate="3000" />
+				<Giant Type="3" Rate="2000" />
+			</GiantTypeAwardRate>
 		</Vip>
 		<Vip Type="3" Name="Gold" ML_MonsterMinLevel="95" MJ_MonsterMinLevel="160" PointPerResetBonus="150" NightStartHour="22" NightStartMinute="0" NightEndHour="7" NightEndMinute="30">
 			<Day ExpBonus="0.0" DropBonus="0" MasterExpBonus="0.0" MasterDropBonus="0" MajesticExpBonus="0.0" MajesticDropBonus="0" OffLevelExp="1.0" />
@@ -141,8 +159,13 @@
 				<Enhanced Level10="50" Level11="50" Level12="50" Level13="45" Level14="45" Level15="40" AddLuck="25" />
 				<Socket Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" SocketWeapon="40" />
 				<Pentagram Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" />
-				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24"/>
+				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24" Fifth_Relic="24" />
 			</ChaosBoxMixRates>
+			<GiantTypeAwardRate>
+				<Giant Type="1" Rate="5000" />
+				<Giant Type="2" Rate="3000" />
+				<Giant Type="3" Rate="2000" />
+			</GiantTypeAwardRate>
 		</Vip>
 		<Vip Type="4" Name="Platinum" ML_MonsterMinLevel="95" MJ_MonsterMinLevel="160" PointPerResetBonus="200" NightStartHour="22" NightStartMinute="0" NightEndHour="7" NightEndMinute="30">
 			<Day ExpBonus="0.0" DropBonus="0" MasterExpBonus="0.0" MasterDropBonus="0" MajesticExpBonus="0.0" MajesticDropBonus="0" OffLevelExp="1.0" />
@@ -153,8 +176,13 @@
 				<Enhanced Level10="50" Level11="50" Level12="50" Level13="45" Level14="45" Level15="40" AddLuck="25" />
 				<Socket Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" SocketWeapon="40" />
 				<Pentagram Level10="40" Level11="40" Level12="40" Level13="35" Level14="35" Level15="30" AddLuck="25" />
-				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24"/>
+				<Wing Second="90" Monster="60" Third_Feather="40" Third_Relic="24" Fourth_Feather="40" Fourth_Relic="24" Fifth_Relic="24" />
 			</ChaosBoxMixRates>
+			<GiantTypeAwardRate>
+				<Giant Type="1" Rate="5000" />
+				<Giant Type="2" Rate="3000" />
+				<Giant Type="3" Rate="2000" />
+			</GiantTypeAwardRate>
 		</Vip>
 	</VipTypes>
 </VipSystem>

@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================										
@@ -16,6 +16,7 @@
 //		~ 4: Gaion Event 2
 //		~ 5: Gaion Event 3
 //		~ 6: Gaion Event 4
+//		~ 7: 5th Quest
 //
 //	Name: Name of instance
 //	MapNumber: Map number to instantiate (copy)
@@ -32,4 +33,5 @@
 	<Instance Type="4" Name="Gaion Event 2" MapNumber="70" AvailableUser="1" AvailableMonster="60" />
 	<Instance Type="5" Name="Gaion Event 3" MapNumber="71" AvailableUser="1" AvailableMonster="60" />
 	<Instance Type="6" Name="Gaion Event 4" MapNumber="72" AvailableUser="1" AvailableMonster="60" />
+	<Instance Type="7" Name="5th Quest" MapNumber="121" AvailableUser="5" AvailableMonster="10" />
 </InstanceSystem>

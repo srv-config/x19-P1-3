@@ -1,7 +1,7 @@
 -- // ============================================================
 -- // == INTERNATIONAL GAMING CENTER NETWORK
 -- // == www.igcn.mu
--- // == (C) 2010-2023 IGC-Network (R)
+-- // == (C) 2010-2024 IGC-Network (R)
 -- // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- // == File is a part of IGCN Group MuOnline Server files.
 -- // ============================================================
@@ -13,20 +13,20 @@
 -- BuffID refers to \Data\BuffEffectManager.cfg
 
 -- Character Classes
-CLASS_WIZARD                                          = 0	-- Fairy Elf, Muse Elf, High Elf
-CLASS_KNIGHT                                          = 1	-- Dark Wizard, Soul Master, Grand Master
-CLASS_ELF                                             = 2	-- Dark Knight, Blade Knight, Blade Master
-CLASS_GLADIATOR                                       = 3	-- Magic Gladiator, Duel Master
-CLASS_DARKLORD                                        = 4	-- Dark Lord, Lord Emperor
-CLASS_SUMMONER                                        = 5	-- Summoner, Bloody Summoner, Dimension Master
-CLASS_RAGEFIGHTER                                     = 6	-- Rage Fighter, Fist Master
-CLASS_GROWLANCER									  = 7	-- Grow Lancer, Mirage Lancer
-CLASS_RUNEWIZARD									  = 8	-- Rune Wizard, Rune Spell Master, Grand Rune Master
-CLASS_SLAYER									  	  = 9	-- Slayer, Royal Slayer, Master Slayer, Slaughterer
-CLASS_GUNCRUSHER									  = 10	-- Gun Crusher, Gun Breaker, Master Gun Breaker, Heist Gun Crusher
-CLASS_LIGHTWIZARD									  = 11	-- Light Wizard, Shining Wizard, Luminous Wizard
-CLASS_LEMURIAMAGE									  = 12	-- Lemuria Mage, Warmage, Archmage, Mystic Mage
-CLASS_ILLUSIONKNIGHT								  = 13	-- Illusion Knight, Mirage Knight, Illusion Master, Mystic Knight
+CLASS_WIZARD                                          = 0
+CLASS_KNIGHT                                          = 1
+CLASS_ELF                                             = 2
+CLASS_GLADIATOR                                       = 3
+CLASS_DARKLORD                                        = 4
+CLASS_SUMMONER                                        = 5
+CLASS_RAGEFIGHTER                                     = 6
+CLASS_GROWLANCER									  = 7
+CLASS_RUNEWIZARD									  = 8
+CLASS_SLAYER									  	  = 9
+CLASS_GUNCRUSHER									  = 10
+CLASS_LIGHTWIZARD									  = 11
+CLASS_LEMURIAMAGE									  = 12
+CLASS_ILLUSIONKNIGHT								  = 13
 
 -- SkillID: 9, Evil Spirit
 function EvilSpiritCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
@@ -601,8 +601,16 @@ function ChaoticDiseierCalc(InDamage, Energy)
 end
 
 -- SkillID: 737, Wind Soul - (Lord Emperor)
-function LordWindSoulCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
-	local OutDamage = InDamage * (Energy / 25 + 200) / 100
+function LordWindSoulCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command, BarrageCount)
+	local OutDamage = 0
+	
+	if (BarrageCount == 1) then
+		OutDamage = InDamage * (Energy / 25 + 200) / 100
+	elseif (BarrageCount == 2) then
+		OutDamage = InDamage * (Energy / 25 + 200) / 100
+	elseif (BarrageCount == 3) then
+		OutDamage = InDamage * (Energy / 25 + 200) / 100
+	end
 	
 	return OutDamage
 end
@@ -1110,12 +1118,6 @@ function SwordBlow_Knight(InDamage, Strength, Dexterity, Vitality, Energy, Barra
 	end
 
 	return OutDamage
-end
-
--- SkillID: 1502, Strong Belief
-function KnightStrongBelief(NormalLevel, MasterLevel, Strength, Dexterity, Vitality, Energy)
-	local Duration = (NormalLevel + MasterLevel) / 4 + 20
-	return Duration
 end
 
 -- SkillID: 1503, Solid Protection

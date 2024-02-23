@@ -572,6 +572,7 @@
 			<!-- <Spawn Index="375" Distance="0" StartX="219" StartY="230" Dir="3" /> --> <!-- Chaos Master -->
 			<!-- <Spawn Index="379" Distance="0" StartX="32" StartY="31" Dir="3" /> --> <!-- Natasha Firecracker Merchant ~ shop managed via ShopList.xml -->
 			<Spawn Index="584" Distance="0" StartX="240" StartY="53" Dir="7" /> <!-- Sir Lesnar -->
+			<Spawn Index="939" Distance="0" StartX="193" StartY="12" Dir="3" /> <!-- Eunice (Town) -->																				 
 		</Spot>
 		<Spot Type="1" Description="Multi-Spawn">
 			<Spawn Index="24" Distance="30" StartX="170" StartY="80" EndX="245" EndY="134" Dir="-1" Count="30" /> <!-- Worm -->
@@ -6466,6 +6467,7 @@
 			<Spawn Index="758" Distance="0" StartX="236" StartY="59" Dir="1" /> <!-- Portal of Dimension -->
 			<Spawn Index="765" Distance="0" StartX="240" StartY="239" Dir="1" /> <!-- Cent(Entrance) -->
 			<Spawn Index="522" Distance="0" StartX="171" StartY="239" Dir="1" /> <!-- Jerint the Assistant -->
+			<Spawn Index="940" Distance="0" StartX="118" StartY="239" Dir="1" /> <!-- Eunice (Entrance) -->																					  
 		</Spot>
 	</Map>
 	<Map Number="116" Name="Deep Dungeon 1">

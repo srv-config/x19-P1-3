@@ -185,7 +185,13 @@
 	<Skill MonsterIndex="922" Type0="31" Unit0="37" Type1="0" Unit1="34" Type2="0" Unit2="35" Type3="0" Unit3="36" Type4="0" Unit4="30" Type5="-1" Unit5="-1" Type6="-1" Unit6="-1" Type7="-1" Unit7="-1" Type8="-1" Unit8="-1" Type9="-1"  Unit9="-1" Name="Selupan" />
 	<Skill MonsterIndex="923" Type0="0" Unit0="117" Type1="0" Unit1="118" Type2="0" Unit2="119" Type3="0" Unit3="120" Type4="0" Unit4="121" Type5="0" Unit5="122" Type6="-1" Unit6="-1" Type7="-1" Unit7="-1" Type8="-1" Unit8="-1" Type9="-1" Unit9="-1" Name="Nix" />
 	<Skill MonsterIndex="924" Type0="0" Unit0="138" Type1="-1" Unit1="-1" Type2="-1" Unit2="-1" Type3="-1" Unit3="-1" Type4="-1" Unit4="-1" Type5="-1" Unit5="-1" Type6="-1" Unit6="-1" Type7="-1" Unit7="-1" Type8="-1" Unit8="-1" Type9="-1" Unit9="-1" Name="God of Darkness" />
+<!-- Bloody Tarkan -->
+	<Skill MonsterIndex="929" Type0="0" Unit0="156" Type1="0" Unit1="156" Type2="0" Unit2="156" Type3="0" Unit3="156" Type4="0" Unit4="156" Type5="0" Unit5="156" Type6="0" Unit6="156" Type7="0" Unit7="156" Type8="0" Unit8="156" Type9="0" Unit9="156" Name="Magma Shaman" />
+	<Skill MonsterIndex="932" Type0="0" Unit0="156" Type1="0" Unit1="156" Type2="0" Unit2="156" Type3="0" Unit3="156" Type4="0" Unit4="156" Type5="0" Unit5="156" Type6="0" Unit6="156" Type7="0" Unit7="156" Type8="0" Unit8="156" Type9="0" Unit9="156" Name="(Elite) Magma Shaman" />
+<!-- Eunice -->
+	<Skill MonsterIndex="937" Type0="0" Unit0="157" Type1="0" Unit1="158" Type2="0" Unit2="159" Type3="0" Unit3="160" Type4="0" Unit4="161" Type5="-1" Unit5="-1" Type6="-1" Unit6="-1" Type7="-1" Unit7="-1" Type8="-1" Unit8="-1" Type9="-1" Unit9="-1" Name="Nix" />
+	<Skill MonsterIndex="938" Type0="0" Unit0="162" Type1="0" Unit1="163" Type2="-1" Unit2="-1" Type3="-1" Unit3="-1" Type4="-1" Unit4="-1" Type5="-1" Unit5="-1" Type6="-1" Unit6="-1" Type7="-1" Unit7="-1" Type8="-1" Unit8="-1" Type9="-1" Unit9="-1" Name="Nix" />
 <!-- Tormenta Island -->
-    <Skill MonsterIndex="944" Type0="0" Unit0="164" Type1="0" Unit1="164" Type2="0" Unit2="164" Type3="0" Unit3="164" Type4="0" Unit4="164" Type5="0" Unit5="164" Type6="0" Unit6="164" Type7="0" Unit7="164" Type8="0" Unit8="164" Type9="0" Unit9="164" Name="Storm Fiend" />
-    <Skill MonsterIndex="947" Type0="0" Unit0="164" Type1="0" Unit1="164" Type2="0" Unit2="164" Type3="0" Unit3="164" Type4="0" Unit4="164" Type5="0" Unit5="164" Type6="0" Unit6="164" Type7="0" Unit7="164" Type8="0" Unit8="164" Type9="0" Unit9="164" Name="(Elite) Storm Fiend" />
+	<Skill MonsterIndex="944" Type0="0" Unit0="164" Type1="0" Unit1="164" Type2="0" Unit2="164" Type3="0" Unit3="164" Type4="0" Unit4="164" Type5="0" Unit5="164" Type6="0" Unit6="164" Type7="0" Unit7="164" Type8="0" Unit8="164" Type9="0" Unit9="164" Name="Storm Fiend" />
+	<Skill MonsterIndex="947" Type0="0" Unit0="164" Type1="0" Unit1="164" Type2="0" Unit2="164" Type3="0" Unit3="164" Type4="0" Unit4="164" Type5="0" Unit5="164" Type6="0" Unit6="164" Type7="0" Unit7="164" Type8="0" Unit8="164" Type9="0" Unit9="164" Name="(Elite) Storm Fiend" />
 </MonsterSkill>

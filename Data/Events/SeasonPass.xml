@@ -97,12 +97,24 @@
 	<PassInfo>
 		<Pass ID="1" StartDate="2023-04-25 08:30" EndDate="2023-06-01 08:30" />
 		<Pass ID="2" StartDate="2023-06-01 08:30" EndDate="2023-06-29 08:30" />
-		<Pass ID="3" StartDate="2023-07-06 08:30" EndDate="2023-08-03 08:30" />	
-		<Pass ID="4" StartDate="2023-08-03 08:30" EndDate="2023-08-31 08:30" />	
-		<Pass ID="5" StartDate="2023-09-07 08:30" EndDate="2023-10-05 08:30" />	
-		<Pass ID="6" StartDate="2023-10-05 08:30" EndDate="2023-11-02 08:30" />	
-		<Pass ID="7" StartDate="2023-11-02 08:30" EndDate="2023-11-30 08:30" />	
+		<Pass ID="3" StartDate="2023-07-06 08:30" EndDate="2023-08-03 08:30" />
+		<Pass ID="4" StartDate="2023-08-03 08:30" EndDate="2023-08-31 08:30" />
+		<Pass ID="5" StartDate="2023-09-07 08:30" EndDate="2023-10-05 08:30" />
+		<Pass ID="6" StartDate="2023-10-05 08:30" EndDate="2023-11-02 08:30" />
+		<Pass ID="7" StartDate="2023-11-02 08:30" EndDate="2023-11-30 08:30" />
 		<Pass ID="8" StartDate="2023-12-07 08:30" EndDate="2024-01-04 08:30" />
+		<Pass ID="9" StartDate="2024-01-04 08:30" EndDate="2024-02-01 08:30" />
+		<Pass ID="10" StartDate="2024-02-01 08:30" EndDate="2024-02-29 08:30" />
+		<Pass ID="11" StartDate="2024-03-07 08:30" EndDate="2024-04-04 08:30" />
+		<Pass ID="12" StartDate="2024-04-04 08:30" EndDate="2024-05-02 08:30" />
+		<Pass ID="13" StartDate="2024-05-02 08:30" EndDate="2024-05-30 08:30" />
+		<Pass ID="14" StartDate="2024-05-30 08:30" EndDate="2024-06-27 08:30" />
+		<Pass ID="15" StartDate="2024-07-04 08:30" EndDate="2024-08-01 08:30" />
+		<Pass ID="16" StartDate="2024-08-01 08:30" EndDate="2024-08-29 08:30" />
+		<Pass ID="17" StartDate="2024-09-05 08:30" EndDate="2024-10-03 08:30" />
+		<Pass ID="18" StartDate="2024-10-10 08:30" EndDate="2024-11-07 08:30" />
+		<Pass ID="19" StartDate="2024-11-07 08:30" EndDate="2024-12-05 08:30" />
+		<Pass ID="20" StartDate="2024-12-05 08:30" EndDate="2025-01-02 08:30" />
 	</PassInfo>
 	<ExpTable>
 		<Exp Level="1" Amount="100" />

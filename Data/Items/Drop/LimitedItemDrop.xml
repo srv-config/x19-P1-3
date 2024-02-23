@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### LimitedItemDrop ###
+//	Enable: Deactivates or activates the system, 0/1
+//
+// ### LimitedItemDrop::DropLimit::Limit ###
+//	Type:
+//		~ 0: Global drop limit, counts limit per realm
+//		~ 1: Character drop limit, counts limit per character
+//
+// ### LimitedItemDrop::DropLimit::Limit::ResetTime ###
+//	DayOfMonth: Day of month to reset the limits, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to reset the limits, -1 if not applies
+//		~ 0: Sunday
+//		~ 1: Monday
+//		~ 2: Tuesday
+//		~ 3: Wednesday
+//		~ 4: Thursday
+//		~ 5: Friday
+//		~ 6: Saturday
+//
+//	Hour: Hour to reset the limits, 0-23
+//	Min: Minute to reset the limits, 0-59
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Data Server must be running at the reset time to perform scheduled reset, otherwise use 'ItemDropLimit Reset' option from menu
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### LimitedItemDrop::DropLimit::Limit::ItemList::Item ###
+//	Cat: Category of item, refer to ItemList.xml
+//	Index: Category of index, refer to ItemList.xml
+//	Level: Level of item, 0-15
+//	MaxCount: Maximum limit, max 2147483647
+//
+// ### LimitedItemDrop::DropItem::Item ###
+//	Cat: Category of item, refer to ItemList.xml
+//	Index: Category of index, refer to ItemList.xml
+//	Level: Level of item, 0-15
+//	LimitType:
+//		~ 0: Global drop limit, counts limit per realm
+//		~ 1: Character drop limit, counts limit per character
+//
+// ### LimitedItemDrop::DropItem::Item::Monster ###
+//	Index: Index of monster to apply drop to
+//	Rate: Chance rate of getting specific item drop, n/1000000
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The 'DropLimit' section is used by Data Server and 'DropItem' by GameServer.
+//~~ If item configured in 'DropItem' will not exist in 'DropLimit' the item will drop as limit would not exist
+//~~ Items are dropped on 'Rate' basis. System keeps drawing the items in order as defined in file.
+//~~ The 'Rate' attribute should be configured from lowest to highest. The limited items can drop as addition to general drop
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<LimitedItemDrop Enable="1">
+	<DropLimit>
+		<Limit Type="0"> <!-- Global Drop Limit -->
+			<ResetTime DayOfMonth="-1" DayOfWeek="4" Hour="10" Min="0" />
+			<ItemList>
+				<Item Cat="13" Index="468" Level="0" MaxCount="100" />
+				<Item Cat="14" Index="467" Level="0" MaxCount="100" />
+				<Item Cat="14" Index="469" Level="0" MaxCount="100" />
+				<Item Cat="14" Index="471" Level="0" MaxCount="100" />
+			</ItemList>
+		</Limit>
+		<Limit Type="1"> <!-- Character based Drop Limit -->
+			<ResetTime DayOfMonth="-1" DayOfWeek="-1" Hour="23" Min="59" />
+			<ItemList>
+				<Item Cat="20" Index="164" Level="0" MaxCount="1" />
+				<Item Cat="20" Index="238" Level="0" MaxCount="4" />
+			</ItemList>
+		</Limit>
+	</DropLimit>
+	<DropItem>
+		<Item Cat="13" Index="468" Level="0" LimitType="0">
+			<Monster Index="839" Rate="100" />
+			<Monster Index="840" Rate="100" />
+			<Monster Index="848" Rate="150" />
+			<Monster Index="849" Rate="150" />
+			<Monster Index="850" Rate="150" />
+			<Monster Index="864" Rate="200" />
+			<Monster Index="865" Rate="200" />
+			<Monster Index="870" Rate="225" />
+			<Monster Index="871" Rate="225" />
+			<Monster Index="872" Rate="225" />
+			<Monster Index="879" Rate="250" />
+			<Monster Index="880" Rate="250" />
+			<Monster Index="898" Rate="275" />
+			<Monster Index="899" Rate="275" />
+			<Monster Index="900" Rate="275" />
+			<Monster Index="908" Rate="300" />
+			<Monster Index="909" Rate="300" />
+			<Monster Index="910" Rate="300" />
+			<Monster Index="914" Rate="325" />
+			<Monster Index="915" Rate="325" />
+			<Monster Index="916" Rate="325" />
+			<Monster Index="930" Rate="350" />
+			<Monster Index="931" Rate="350" />
+			<Monster Index="932" Rate="350" />
+			<Monster Index="945" Rate="375" />
+			<Monster Index="946" Rate="375" />
+			<Monster Index="947" Rate="375" />
+		</Item>
+		<Item Cat="14" Index="467" Level="0" LimitType="0">
+			<Monster Index="839" Rate="100" />
+			<Monster Index="840" Rate="100" />
+			<Monster Index="848" Rate="150" />
+			<Monster Index="849" Rate="150" />
+			<Monster Index="850" Rate="150" />
+			<Monster Index="864" Rate="200" />
+			<Monster Index="865" Rate="200" />
+			<Monster Index="870" Rate="225" />
+			<Monster Index="871" Rate="225" />
+			<Monster Index="872" Rate="225" />
+			<Monster Index="879" Rate="250" />
+			<Monster Index="880" Rate="250" />
+			<Monster Index="898" Rate="275" />
+			<Monster Index="899" Rate="275" />
+			<Monster Index="900" Rate="275" />
+			<Monster Index="908" Rate="300" />
+			<Monster Index="909" Rate="300" />
+			<Monster Index="910" Rate="300" />
+			<Monster Index="914" Rate="325" />
+			<Monster Index="915" Rate="325" />
+			<Monster Index="916" Rate="325" />
+			<Monster Index="930" Rate="350" />
+			<Monster Index="931" Rate="350" />
+			<Monster Index="932" Rate="350" />
+			<Monster Index="945" Rate="375" />
+			<Monster Index="946" Rate="375" />
+			<Monster Index="947" Rate="375" />
+		</Item>
+		<Item Cat="14" Index="469" Level="0" LimitType="0">
+			<Monster Index="839" Rate="100" />
+			<Monster Index="840" Rate="100" />
+			<Monster Index="848" Rate="150" />
+			<Monster Index="849" Rate="150" />
+			<Monster Index="850" Rate="150" />
+			<Monster Index="864" Rate="200" />
+			<Monster Index="865" Rate="200" />
+			<Monster Index="870" Rate="225" />
+			<Monster Index="871" Rate="225" />
+			<Monster Index="872" Rate="225" />
+			<Monster Index="879" Rate="250" />
+			<Monster Index="880" Rate="250" />
+			<Monster Index="898" Rate="275" />
+			<Monster Index="899" Rate="275" />
+			<Monster Index="900" Rate="275" />
+			<Monster Index="908" Rate="300" />
+			<Monster Index="909" Rate="300" />
+			<Monster Index="910" Rate="300" />
+			<Monster Index="914" Rate="325" />
+			<Monster Index="915" Rate="325" />
+			<Monster Index="916" Rate="325" />
+			<Monster Index="930" Rate="350" />
+			<Monster Index="931" Rate="350" />
+			<Monster Index="932" Rate="350" />
+			<Monster Index="945" Rate="375" />
+			<Monster Index="946" Rate="375" />
+			<Monster Index="947" Rate="375" />
+		</Item>
+		<Item Cat="14" Index="471" Level="0" LimitType="0">
+			<Monster Index="839" Rate="100" />
+			<Monster Index="840" Rate="100" />
+			<Monster Index="848" Rate="150" />
+			<Monster Index="849" Rate="150" />
+			<Monster Index="850" Rate="150" />
+			<Monster Index="864" Rate="200" />
+			<Monster Index="865" Rate="200" />
+			<Monster Index="870" Rate="225" />
+			<Monster Index="871" Rate="225" />
+			<Monster Index="872" Rate="225" />
+			<Monster Index="879" Rate="250" />
+			<Monster Index="880" Rate="250" />
+			<Monster Index="898" Rate="275" />
+			<Monster Index="899" Rate="275" />
+			<Monster Index="900" Rate="275" />
+			<Monster Index="908" Rate="300" />
+			<Monster Index="909" Rate="300" />
+			<Monster Index="910" Rate="300" />
+			<Monster Index="914" Rate="325" />
+			<Monster Index="915" Rate="325" />
+			<Monster Index="916" Rate="325" />
+			<Monster Index="930" Rate="350" />
+			<Monster Index="931" Rate="350" />
+			<Monster Index="932" Rate="350" />
+			<Monster Index="945" Rate="375" />
+			<Monster Index="946" Rate="375" />
+			<Monster Index="947" Rate="375" />
+		</Item>
+		<Item Cat="20" Index="164" Level="0" LimitType="1">
+			<Monster Index="892" Rate="200" />
+			<Monster Index="893" Rate="200" />
+			<Monster Index="894" Rate="200" />
+			<Monster Index="895" Rate="250" />
+			<Monster Index="896" Rate="250" />
+			<Monster Index="897" Rate="250" />
+			<Monster Index="905" Rate="300" />
+			<Monster Index="906" Rate="300" />
+			<Monster Index="907" Rate="300" />
+			<Monster Index="908" Rate="350" />
+			<Monster Index="909" Rate="350" />
+			<Monster Index="910" Rate="350" />
+			<Monster Index="911" Rate="400" />
+			<Monster Index="912" Rate="400" />
+			<Monster Index="913" Rate="400" />
+			<Monster Index="914" Rate="450" />
+			<Monster Index="915" Rate="450" />
+			<Monster Index="916" Rate="450" />
+			<Monster Index="926" Rate="500" />
+			<Monster Index="927" Rate="500" />
+			<Monster Index="928" Rate="500" />
+			<Monster Index="929" Rate="500" />			
+			<Monster Index="930" Rate="550" />
+			<Monster Index="931" Rate="550" />
+			<Monster Index="932" Rate="550" />
+			<Monster Index="942" Rate="600" />
+			<Monster Index="943" Rate="600" />
+			<Monster Index="944" Rate="600" />
+			<Monster Index="945" Rate="650" />
+			<Monster Index="946" Rate="650" />
+			<Monster Index="947" Rate="650" />			
+		</Item>
+		<Item Cat="20" Index="238" Level="0" LimitType="1">
+			<Monster Index="892" Rate="400" />
+			<Monster Index="893" Rate="400" />
+			<Monster Index="894" Rate="400" />
+			<Monster Index="895" Rate="450" />
+			<Monster Index="896" Rate="450" />
+			<Monster Index="897" Rate="450" />
+			<Monster Index="905" Rate="500" />
+			<Monster Index="906" Rate="500" />
+			<Monster Index="907" Rate="500" />
+			<Monster Index="908" Rate="550" />
+			<Monster Index="909" Rate="550" />
+			<Monster Index="910" Rate="550" />
+			<Monster Index="911" Rate="600" />
+			<Monster Index="912" Rate="600" />
+			<Monster Index="913" Rate="600" />
+			<Monster Index="914" Rate="650" />
+			<Monster Index="915" Rate="650" />
+			<Monster Index="916" Rate="650" />
+			<Monster Index="926" Rate="700" />
+			<Monster Index="927" Rate="700" />
+			<Monster Index="928" Rate="700" />
+			<Monster Index="929" Rate="700" />			
+			<Monster Index="930" Rate="750" />
+			<Monster Index="931" Rate="750" />
+			<Monster Index="932" Rate="750" />
+			<Monster Index="942" Rate="800" />
+			<Monster Index="943" Rate="800" />
+			<Monster Index="944" Rate="800" />
+			<Monster Index="945" Rate="850" />
+			<Monster Index="946" Rate="850" />
+			<Monster Index="947" Rate="850" />
+		</Item>		
+	</DropItem>
+</LimitedItemDrop>

@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -44,12 +44,20 @@
 //		~ 2: Second Evo
 //		~ 3: Third Evo
 //		~ 4: Fourth Evo
+//		~ 5: Fifth Evo
 //
 //	Level: Regular level of character to set, applies if set greater than 0
 //	MasterLevel: Master level of character to set, applies if set greater than 0
 //	Resets: Number of resets to set to the character, applies if set greater than 0
 //	MarlonFirstQuest: Defines whether to set first Marlon Quest as completed, may be required for selected characters, such as Dark Knight, 0/1
 //	MarlonSecondQuest: Defines whether to set second Marlon Quest as completed, may be required for selected characters, such as Dark Knight, 0/1
+//	GiantQuest: Defines whether to set Giant Quest as completed, can be set only for 5th class, 0/1
+//	GiantMountType: Giant type to set if GiantQuest is configured to 1
+//		~ 0: None, can be used only if GiantQuest is set to 0
+//		~ 1: Type 1 giant
+//		~ 2: Type 2 giant
+//		~ 3: Type 3 giant
+//
 //	Zen: Number of Zen to set to the character, max: 2147483647
 //	Ruud: Number of Ruud to set to the character, max: 2147483647
 //	InventoryExpansion: Apply expanded inventory
@@ -153,9 +161,13 @@
 //			-2: Random options set (based on rates from ArtifactSystem.xml)
 //			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
 //
-//	SetItem:
+//	SetItem: To reward ancient item properly it must added as ancient in relevant systems, otherwise option will be ignored
+//		~ -1: Random tier based on defined item
 //		~ 0: no ancient
-//		~ 1: ancient (random Tier of specified item) - must be added as ancient, otherwise option will be ignored
+//		~ 1: Tier I ancient
+//		~ 2: Tier I ancient
+//		~ 3: Tier I ancient
+//		~ 4: Tier I ancient
 //
 //	SocketCount:
 //		~ 0: no Socket slots
@@ -168,6 +180,7 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Type attribute of the item must be set to 2 - refer to ItemList.xml
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 //	ElementalItem:
 //		~ 0: no Elemental attribute
 //		~ 1: Fire
@@ -186,6 +199,7 @@
 //	Duration: Duration of the buff, seconds
 //	Name: Name of the Buff, used for in-file description only
 //	Description: Description of the Buff, used for in-file description only
+//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Section is used only to define item based buffs that are not inventory activated buff items
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,7 +210,7 @@
 <StarterInventory Enable="0">
 	<ServerList>
 		<Server Code="-1">
-			<Character Class="0" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Wizard -->
+			<Character Class="0" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Wizard -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="0" WeaponLeft="1" Helm="41" Armor="52" Pants="63" Gloves="74" Boots="85" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -207,7 +221,7 @@
 				<Location MapNumber="-1" StartX="1" EndX="255" StartY="1" EndY="255" />
 			</Character>
 			
-			<Character Class="1" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Knight -->
+			<Character Class="1" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Knight -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="2" WeaponLeft="3" Helm="29" Armor="50" Pants="61" Gloves="72" Boots="83" Wings="96" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -217,7 +231,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="2" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Elf -->
+			<Character Class="2" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Elf -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="4" WeaponLeft="5" Helm="30" Armor="51" Pants="62" Gloves="73" Boots="84" Wings="94" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -227,7 +241,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="3" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Magic Gladiator -->
+			<Character Class="3" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Magic Gladiator -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="6" WeaponLeft="7" Helm="-1" Armor="52" Pants="63" Gloves="74" Boots="85" Wings="96" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -237,7 +251,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="4" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Lord -->
+			<Character Class="4" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Lord -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="8" WeaponLeft="-1" Helm="29" Armor="50" Pants="61" Gloves="72" Boots="83" Wings="97" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -247,7 +261,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="5" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Summoner -->
+			<Character Class="5" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Summoner -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="11" WeaponLeft="12" Helm="42" Armor="53" Pants="64" Gloves="75" Boots="86" Wings="97" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -257,7 +271,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="6" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Rage Fighter -->
+			<Character Class="6" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Rage Fighter -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="13" WeaponLeft="13" Helm="29" Armor="50" Pants="61" Gloves="-1" Boots="83" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -267,7 +281,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="7" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Grow Lancer -->
+			<Character Class="7" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Grow Lancer -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Skills List="" />
 				<Equipment WeaponRight="15" WeaponLeft="16" Helm="43" Armor="54" Pants="65" Gloves="76" Boots="87" Wings="97" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
@@ -277,7 +291,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="8" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Rune Wizard -->
+			<Character Class="8" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Rune Wizard -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Skills List="" />
 				<Equipment WeaponRight="17" WeaponLeft="18" Helm="44" Armor="55" Pants="66" Gloves="77" Boots="88" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
@@ -287,7 +301,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="9" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Slayer -->
+			<Character Class="9" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Slayer -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="19" WeaponLeft="19" Helm="45" Armor="56" Pants="67" Gloves="78" Boots="89" Wings="96" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -297,7 +311,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="10" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Gun Crusher -->
+			<Character Class="10" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Gun Crusher -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="21" WeaponLeft="21" Helm="46" Armor="57" Pants="68" Gloves="79" Boots="90" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -307,7 +321,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="11" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Light Wizard -->
+			<Character Class="11" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Light Wizard -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="0" WeaponLeft="23" Helm="47" Armor="58" Pants="69" Gloves="80" Boots="91" Wings="98" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -317,7 +331,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="12" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Lemuria Mage -->
+			<Character Class="12" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Lemuria Mage -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="25" WeaponLeft="7" Helm="48" Armor="59" Pants="70" Gloves="81" Boots="92" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />
@@ -327,7 +341,7 @@
 				<Buffs List="0;7" />
 			</Character>
 			
-			<Character Class="13" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Illusion Knight -->
+			<Character Class="13" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Illusion Knight -->
 				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
 				<Equipment WeaponRight="28" WeaponLeft="-1" Helm="49" Armor="60" Pants="71" Gloves="82" Boots="93" Wings="99" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
 				<Skills List="" />

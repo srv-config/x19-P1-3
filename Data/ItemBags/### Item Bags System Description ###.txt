@@ -2,7 +2,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -91,20 +91,20 @@
 //	DisplayName: Name of section, displayed within logs and used by ToolKit Premium editor
 //
 // ### ItemBag::DropSection::DropAllow ### - by setting lower class the higher one automatically is being allowed
-//	DW: 0 - Disallow, 1 - Dark Wizard, 2 - Soul Master, 3 - Grand Master, 4 - Soul Wizard
-//	DK: 0 - Disallow, 1 - Dark Knight, 2 - Blade Knight, 3 - Blade Master, 4 - Dragon Knight
-//	ELF: 0 - Disallow, 1 - Fairy Elf, 2 - Muse Elf, 3 - High Elf, 4 - Noble Elf
-//	MG: 0 - Disallow, 1 - Magic Gladiator, 2 - Duel Master, 4 - Magic Knight
-//	DL: 0 - Disallow, 1 - Dark Lord, 2 - Lord Emperor, 4 - Empire Lord
-//	SU: 0 - Disallow, 1 - Summoner, 2 - Bloody Summoner, 3 - Dimension Master, 4 - Dimension Summoner
-//	RF: 0 - Disallow, 1 - Rage Fighter, 2 - Fist Master, 4 - Fist Blazer
-//	GL: 0 - Disallow, 1 - Grow Lancer, 2 - Miracle Lancer, 4 - Shining Lancer
-//	RW: 0 - Disallow, 1 - Rune Wizard, 2 - Rune Spell Master, 4 - Rune Grand Master
-//	SLA: 0 - Disallow, 1 - Slayer, 2 - Royal Slayer, 3 - Master Slayer, 4 - Slaughterer
-//	GC: 0 - Disallow, 1 - Gun Crusher, 2 - Gun Breaker, 3 - Master Gun Breaker, 4 - Heist Gun Crusher
-//	LW: 0 - Disallow, 1 - Light Wizard, 2 - Light Master, 3 - Shining Wizard, 4 - Luminous Wizard
-//	LM: 0 - Disallow, 1 - Lemuria Mage, 2 - Warmage, 3 - Archmage, 4 - Mystic Mage
-//	IK: 0 - Disallow, 1 - Illusion Knight, 2 - Mirage Knight, 3 - Illusion Master, 4 - Mystic Knight
+//	DW: 0 or specific class evolution: 1/2/3/4/5
+//	DK: 0 or specific class evolution: 1/2/3/4/5
+//	ELF: 0 or specific class evolution: 1/2/3/4/5
+//	MG: 0 or specific class evolution: 1/2/4/5
+//	DL: 0 or specific class evolution: 1/2/4/5
+//	SU: 0 or specific class evolution: 1/2/3/4/5
+//	RF: 0 or specific class evolution: 1/2/4/5
+//	GL: 0 or specific class evolution: 1/2/4/5
+//	RW: 0 or specific class evolution: 1/2/4/5
+//	SLA: 0 or specific class evolution: 1/2/3/4/5
+//	GC: 0 or specific class evolution: 1/2/3/4/5
+//	LW: 0 or specific class evolution: 1/2/3/4/5
+//	LM: 0 or specific class evolution: 1/2/3/4/5
+//	IK: 0 or specific class evolution: 1/2/3/4/5
 //	PlayerMinLevel: Minimum level of player to apply drop of items from the section (must be lower or equal to PlayerMaxLevel)
 //	PlayerMaxLevel: Maximum level of player to apply drop of items from the section (must be greater or equal to PlayerMinLevel)
 //	PlayerMinReset: Minimum reset of player to apply drop of items from the section (must be lower or equal to PlayerMaxReset)
@@ -140,7 +140,7 @@
 //			-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
 //			-10: A draw of bonus and excellent options set from MasteryExcOptions.xml. If used, the skill and luck attributes from this file are ignored, see referred file for further details.
 //			X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
-//		Grade Options (4th Wings):
+//		Grade Options (4th and 5th Wings - 5th Wings can support up to two grade options of level 0 only):
 //			-1: No grade option
 //			-2: Random count of random options (based on rates from ItemGradeOption.xml)
 //			-3;X: Specified count of random options, the 'X' defines count of grade options, max 4 (options selection based on rates from ItemGradeOption.xml)
