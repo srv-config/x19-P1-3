@@ -77,6 +77,22 @@
 //
 //	Excellent: Minimum excellent options the item has to apply new option
 //
+// ### ItemOptionSystem::Socket::Item ###
+//	Cat: Group of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	MinLevel: Minimum level of item to qualify it for the option
+//	OptionIndex: Same list applies as in "ItemOptionSystem::Items::Item" section
+//	OptionValue: Value to apply the option with
+//	OptionProbability: Probability to apply the option on item, 0-100
+//	SeedMinLevel: Minimum level of seed to qualify the item
+//	SeedMaxLevel: Maximum level of seed to qualify the item
+//	SeedCountFire: Number of Fire Seeds
+//	SeedCountWater: Number of Water Seeds
+//	SeedCountIce: Number of Ice Seeds
+//	SeedCountWind: Number of Wind Seeds
+//	SeedCountLight: Number of Light Seeds
+//	SeedCountEarth: Number of Earth Seeds
+//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ System applies static (defined) options to items meeting certain criteria upon equipment.
 //~~ Any static option defined in the file should be manually added to ItemToolTip.bmd so it can be displayed
@@ -86,17 +102,17 @@
 -->
 
 <ItemOptionSystem Enabled="0" Password="WErt$4t3">
-<Notices PrintRequirementNotice="1" ColorID="10">
-	<Strings>
-		<String Index="0" Text=" (Rq " />
-	</Strings>
-	<Requirements>
-		<Req Index="0" Text=" Lv >= +%d"/>
-		<Req Index="1" Text=" Anc %d" />
-		<Req Index="2" Text=" Exc Cnt >= %d" />
-		<Req Index="3" Text=" Sckt >= %d" />
-	</Requirements>
-</Notices>
+	<Notices PrintRequirementNotice="1" ColorID="10">
+		<Strings>
+			<String Index="0" Text=" (Rq " />
+		</Strings>
+		<Requirements>
+			<Req Index="0" Text=" Lv >= +%d"/>
+			<Req Index="1" Text=" Anc %d" />
+			<Req Index="2" Text=" Exc Cnt >= %d" />
+			<Req Index="3" Text=" Sckt >= %d" />
+		</Requirements>
+	</Notices>
 	<Items>
 		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="0" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
 		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="1" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
@@ -108,6 +124,9 @@
 		<Item Cat="4" Index="40" MinLevel="5" SocketCount="0" OptionIndex="4" OptionValue="10000" OptionProbability="100" Ancient="-1" Excellent="0" />
 		<Item Cat="13" Index="37" MinLevel="0" SocketCount="0" OptionIndex="7" OptionValue="1000" OptionProbability="0" Ancient="-1" Excellent="0" /> 
 	</Items>
+    <Socket>
+        <Item Cat="19" Index="190" MinLevel="0" MaxLevel="15" OptionIndex="0" OptionValue="5" OptionProbability="100" SeedMinLevel="0" SeedMaxLevel="5" SeedCountFire="1" SeedCountWater="1" SeedCountIce="0" SeedCountWind="1" SeedCountLight="0" SeedCountEarth="0" />
+    </Socket>
 	<OptionText>
 		<Text OptionId="0" ColorID="6" Title="Max HP is reduced by %d%% (Chance %d%%)" />
 		<Text OptionId="1" ColorID="7" Title="Attack speed is reduced by %d%% (Chance %d%%)" />

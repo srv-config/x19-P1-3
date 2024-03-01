@@ -46,7 +46,8 @@
 //~~ Note: Selected NPCs, such as Potion Girl or Mirage will not work with the speak system
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//	MossMerchant: defines a Moss Merchant Lottery Shop, only for NPC 492, should always be 1
+//	MossMerchant: Defines a Moss Merchant Lottery Shop, only for NPC 492, should always be 1
+//	GuildMaster: Defines Flags Shop, only for NPC 241, should always be 1 (requires Flags System plugin)
 //	BattleCore: Defines a shop located on Battle Core server, if so set to 1
 //
 // ### Shops::TextList::Text ###
@@ -72,6 +73,7 @@
 		<Shop NPCIndex="245" MapNumber="2" PosX="225" PosY="41" Dir="3" VipType="-1" GMShop="0" FileName="NPC(245)_Wizard_Izabel.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 		<Shop NPCIndex="246" MapNumber="2" PosX="186" PosY="47" Dir="3" VipType="-1" GMShop="0" FileName="NPC(246)_Weapons_Merchant_Zienna.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 		<Shop NPCIndex="379" MapNumber="2" PosX="32" PosY="31" Dir="3" VipType="-1" GMShop="0" FileName="NPC(379)_Natasha_Firecracker_Merchant.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="241" MapNumber="2" PosX="215" PosY="45" Dir="1" VipType="-1" GMShop="0" GuildMaster="1" FileName="NPC(241)_Royal_Guard_Captain_Lorence.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 	<!-- Noria -->
 		<Shop NPCIndex="242" MapNumber="3" PosX="173" PosY="125" Dir="1" VipType="-1" GMShop="0" FileName="NPC(242)_Elf_Lala.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 		<Shop NPCIndex="243" MapNumber="3" PosX="195" PosY="124" Dir="2" VipType="-1" GMShop="0" FileName="NPC(243)_Eo_the_Craftsman.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
