@@ -259,7 +259,7 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,441),0, 'Item_(14,441,0)_Lapidary_Stone_Box') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,442),0, 'Item_(14,442,0)_Shiny_Earring_Box_(Left)') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,443),0, 'Item_(14,443,0)_Shiny_Earring_Box_(Right)') -- DropFunction /4/
-	--AddItemBag(BAG_INVENTORY, MakeItemID(14,445),0, 'Item_(14,445,0)_Box_of_Blessing') -- DropFunction /4/
+	AddItemBag(BAG_INVENTORY, MakeItemID(14,445),0, 'Item_(14,445,0)_Box_of_Blessing') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,447),0, 'Item_(14,447,0)_Ruud_Box_(2000)') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,448),0, 'Item_(14,448,0)_Ruud_Box_(3000)') -- DropFunction /4/
 	-- AddItemBag(BAG_INVENTORY, MakeItemID(14,455),0, 'Item_(14,455,0)_Small_Gift_Box') -- DropFunction /4/
@@ -368,6 +368,7 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_MONSTER, 0,760,'Monster_(760)_Rooster_White') -- DropFunction /2/
 	AddItemBag(BAG_MONSTER, 0,761,'Monster_(761)_Rooster_Purple') -- DropFunction /2/
 	AddItemBag(BAG_MONSTER, 0,762,'Monster_(762)_Rooster_Red') -- DropFunction /2/
+	AddItemBag(BAG_MONSTER, 0,808,'Monster_(808)_Power_Chicken') -- DropFunction /2/
 	AddItemBag(BAG_MONSTER, 0,839,'Monster_(839)_Elite_Great_Bahamut_of_Abyss') -- DropFunction /2/
 	AddItemBag(BAG_MONSTER, 0,840,'Monster_(840)_Elite_Lizard_King_of_Abyss') -- DropFunction /2/
 	AddItemBag(BAG_MONSTER, 0,848,'Monster_(848)_Elite_Scorched_Warrior') -- DropFunction /2/

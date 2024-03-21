@@ -871,6 +871,9 @@
 		<Msg ID="845" Text="The item does not meet any criteria for being upgraded." />
 		<Msg ID="846" Text="This item is restricted from use." />
 		<Msg ID="847" Text="Cannot insert the card, level up to unlock the slot." />
+		<Msg ID="848" Text="Your class is not allowed to use this flag." />
+		<Msg ID="849" Text="Adding the Luck option failed." />
+		<Msg ID="850" Text="The jewel cannot be used with this item." />
 	</Message>
 	<Map>
 		<Msg ID="0" Text="Lorencia" />

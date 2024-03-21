@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -12,11 +12,17 @@
 //	Enable: Activates or deactivates the event, 0/1
 //
 // ### LorenDeepEvent::Schedule::Start ###
-//	Hour: Start hour of the event, 0-23
-//	Minute: Start minute of the event, 0-60
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ section accepts multiple schedules
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
 //
 // ### LorenDeepEvent::AssaultTypeSettings::Assault ###
 //	Type: Type of Assault, starting from 1
@@ -47,7 +53,7 @@
 
 <LorenDeepEvent Enable="1">
 	<Schedule>
-		<Start Hour="20" Minute="0" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="20" Minute="0" Second="-1" />
 	</Schedule>
 
 	<AssaultTypeSettings>

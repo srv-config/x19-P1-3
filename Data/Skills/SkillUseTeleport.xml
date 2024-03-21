@@ -81,5 +81,8 @@
 	<Skill Index="1078" Name="Evil Spirit Enhancement Skill" Enable="0" />
 	<Skill Index="1220" Name="Shining Bird Enhancement Skill" Enable="0" />
 	<Skill Index="1221" Name="Dragon Violent Enhancement Skill" Enable="0" />
-	<Skill Index="1216" Name="Spear Storm Enhancement Skill" Enable="0" />
+	<Skill Index="1216" Name="Spear Storm Enhancement Skill" Enable="1" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2037" Name="Meteor Storm of Gale" Enable="1" />
+	<Skill Index="2080" Name="Spear Storm of Saturation" Enable="1" />
 </SkillUseTeleport>

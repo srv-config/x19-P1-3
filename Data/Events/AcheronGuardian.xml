@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -13,25 +13,21 @@
 //	Duration: Event duration, minutes
 //	ChannelClose: Time of automated move from event map after event finish, minutes
 //
-//	### AcheronGuardianEvent::ActiveDay ###
-//	Sun: Activates event on Sunday, 0/1
-//	Mon: Activates event on Monday, 0/1
-//	Tue: Activates event on Tuesday, 0/1
-//	Wed: Activates event on Wednesday, 0/1
-//	Thur: Activates event on Thursday, 0/1
-//	Fri: Activates Event on Friday, 0/1
-//	Sat: Activates event on Saturday, 0/1
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ NOTE ~ The event must stay disabled on Arca Battle event day
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
 // ### AcheronGuardianEvent::Schedule::Start ###
-//	Hour: Hour of event start, 0-23
-//	Minute: Minute of event start, 0-60
-//	Unk:
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ NOTE ~ Section accepts extra schedule entries
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The event can be scheduled on same day as Arca Battle event but at different time range
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // ### AcheronGuardianEvent::ObeliskInformation::Obelisk ###
 //	Index: Index of event obelisk, unique in section, starting from 1
@@ -64,6 +60,7 @@
 //		3: Earth
 //		4: Wind
 //		5: Darkness
+//
 //	Name: Name of a Monster, used for in-file description purpose only
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,13 +71,16 @@
 -->
 
 <AcheronGuardianEvent Enable="1" Duration="30" ChannelClose="1">
-	<ActiveDay Sun="1" Mon="1" Tue="1" Wed="0" Thu="1" Fri="1" Sat="1" />
-	
 	<Schedule>
-		<Start Hour="23" Minute="0" Unk="0" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="1" Hour="23" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="2" Hour="23" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="3" Hour="23" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="5" Hour="23" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="6" Hour="23" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="7" Hour="23" Minute="0" Second="-1" />
 	</Schedule>
 	
-	<ObeliskInformation>
+	<ObeliskInformation> <!-- Other element types are managed automatically, do not define them -->
 		<Obelisk Index="1" MapNumber="92" PosX="89"  PosY="41"  Name="Cursed Fire Tower" /> <!-- Alkmaar Area -->	
 		<Obelisk Index="2" MapNumber="92" PosX="188" PosY="101" Name="Cursed Fire Tower" /> <!-- Ubaid Area -->	
 		<Obelisk Index="3" MapNumber="96" PosX="162" PosY="54"  Name="Cursed Fire Tower" /> <!-- Debenter Area -->

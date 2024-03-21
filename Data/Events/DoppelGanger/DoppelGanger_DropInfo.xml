@@ -53,6 +53,7 @@
 //	Index: Index of the item, refer to ItemLisr.xml
 //	MinLevel: Minimum level of item to drop, 0~15, must be lower or equal to MaxLevel
 //	MaxLevel: Maximum level of item to drop, 0~15, must be grater of equal to MinLevel
+//	Durability: Durability of item, can be set optionally, if set to 0 a default from ItemList.xml will be used, 0~255
 //	Skill: Defines if item can drop with Skill, 0/1
 //	Luck: Defines if item can drop with Luck, 0/1
 //	Option: Defines if item can drop with Option, 0/1

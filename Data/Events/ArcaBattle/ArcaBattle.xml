@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -25,25 +25,21 @@
 //	OppositeTeam: Damage reduction on Opposite Team players during the event, expressed in percent, 0-100
 //	SelfTeam: Damage reduction on Self Team companions during the event, expressed in percent, 0-100
 //
-//	### ArcaBattleEvent::ActiveDay ###
-//	Sun: Activates event on Sunday, 0/1
-//	Mon: Activates event on Monday, 0/1
-//	Tue: Activates event on Tuesday, 0/1
-//	Wed: Activates event on Wednesday, 0/1
-//	Thur: Activates event on Thursday, 0/1
-//	Fri: Activates Event on Friday, 0/1
-//	Sat: Activates event on Saturday, 0/1
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//	~ NOTE ~ The event must stay disabled on Acheron Guardian event day
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-// ### ArcaBattleEvent::ActiveDay::Schedule::Start ###
-//	Hour: Hour of event start, 0-23
-//	Minute: Minute of event start, 0-60
-//	Unk:
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//	~ NOTE ~ Section accepts extra schedule entries
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ### ArcaBattleEvent::Schedule::Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The event can be scheduled on same day as Acheron Guardian event but at different time range
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // ### ArcaBattleEvent::ObeliskInformation::Obelisk ###
 //	Index: Index of event obelisk, unique in section, starting from 1
@@ -100,10 +96,9 @@
 
 <ArcaBattleEvent Enable="1" FriendlyFire="0" MinGuildMember="10" DestroyPartyWhenEnter="1" MasterRegTime="10" MemberRegTime="10" ProgressWait="3" PartyWait="5" Duration="30" ChannelClose="10" TowerBuffRewardExp="20">
 	<DamageReduction OppositeTeam="100" SelfTeam="100" />
-	<ActiveDay Sun="0" Mon="0" Tue="0" Wed="1" Thu="0" Fri="0" Sat="0" />
 
 	<Schedule>
-		<Start Hour="22" Minute="0" Unk="0" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="4" Hour="22" Minute="0" Second="-1" />
 	</Schedule>
 
 	<ObeliskInformation>

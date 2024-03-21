@@ -24,7 +24,9 @@
 //		~ 6: Saturday
 //		~ -1: every day
 //	StartHour: Start hour of the event, 0-23
+//	StartMinute: End minute of the event, 0-59
 //	EndHour: End hour of the event, 0-23
+//	EndHour: End minute of the event, 0-59
 //	ExpMultiplier: Regular experience multiplier
 //	MasterExpMultiplier: Master experience multiplier
 //	MajesticExpMultiplier: Majestic experience multiplier
@@ -34,8 +36,8 @@
 -->
 
 <BonusEvent Enable="1" DisplayNotice="1">
-	<Event DayOfWeek="-1" StartHour="8" EndHour="10" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
-	<Event DayOfWeek="-1" StartHour="14" EndHour="16" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
-	<Event DayOfWeek="-1" StartHour="20" EndHour="22" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
-	<Event DayOfWeek="-1" StartHour="2" EndHour="4" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="8" StartMinute="0" EndHour="10" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="14" StartMinute="0" EndHour="16" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="20" StartMinute="0" EndHour="22" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="2" StartMinute="0" EndHour="4" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
 </BonusEvent>
