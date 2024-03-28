@@ -387,5 +387,6 @@
 		<Text Id="43" Text=" Hunt Point Bonus" />
 		<Text Id="44" Text=" Inactive Points" />
 		<Text Id="45" Text=" Hunt Points" />
+		<Text Id="46" Text=" Leaving the game is not possible during Battle!" />
 	</Language>
 </HuntPointSystem>

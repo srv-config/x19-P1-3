@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -19,7 +19,7 @@
 //	MonsterKillReqPerPlayer: Count of monster required to kill to get the bridge to fall down
 //
 // ### BloodCastle::Monster ###
-//	TimeToRegen: Time to respawn monster, seconds
+//	TimeToRegen: Time to respawn monster, milliseconds
 //
 // ### BloodCastle::Time ###
 //	ToOpen: Time the event will be opened from event start notification moment, minutes
@@ -53,11 +53,11 @@
 //	Level: Level of the event the the configuration applies to
 //	Multiplier: Multiplier of reward exp (received after completing the event)
 //
-// STRICTLY NO COMMENTS INSIDE TAGS 
+// STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
 <BloodCastle Enable="1" EarlyFinishRestriction="0" EarlyFinishMinTime="300" MonsterKillReqPerPlayer="40">
-<Monster TimeToRegen="10" />
+<Monster TimeToRegen="0" />
 <Time ToOpen="5" PlayDuration="15" ToClose="1" />
 	
 	<Schedule>
