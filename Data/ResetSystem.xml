@@ -41,6 +41,10 @@
 //	SaveOldStatPoint: Determines whether to preserve pre-reset free stat points, applies only if ResetStats is enabled, 0/1
 //	MoveToCharSelectWindow: Determines whether to force move to character selection screen after reset, 0/1
 //	StayOnPosition: Determines whether character should keep the same position after reset, 0/1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For VIP players options from VipSettings.xml apply: ResetMoveToCharSelectWindow, ResetStayOnPosition
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 //	MaxResetPoints: Maximum number of free level up points after reset
 //	LevelAfterReset: Regular level to set after reset, minimum value is 1, free stat points are calculated and added automatically
 //	ResetMasterLevel: Determines whether to reset master level, 0/1
