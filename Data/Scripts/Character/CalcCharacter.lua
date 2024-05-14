@@ -878,6 +878,43 @@ function ElementalDefenseRateCalc(Class, Strength, Dexterity, Energy, Vitality, 
 	return DefenseRate
 end
 
+function CalcAbilityGauge(Class, Strength, Dexterity, Vitality, Energy, Leadership, NormalLevel, MasterLevel)
+	local AG = 0
+	local TotalLevel = NormalLevel + MasterLevel
+	
+	if(Class == CLASS_WIZARD) then
+		AG = (Strength * 0.2) + (Dexterity * 0.4) + (Vitality * 0.3) + (Energy * 0.2)
+	elseif(Class == CLASS_KNIGHT) then
+		AG = (Strength * 0.15) + (Dexterity * 0.2) + (Vitality * 0.3) + (Energy * 1.0)
+	elseif(Class == CLASS_ELF) then
+		AG = (Strength * 0.3) + (Dexterity * 0.2) + (Vitality * 0.3) + (Energy * 0.2)
+	elseif(Class == CLASS_GLADIATOR) then
+		AG = (Strength * 0.2) + (Dexterity * 0.25) + (Vitality * 0.3) + (Energy * 0.15)
+	elseif(Class == CLASS_DARKLORD) then
+		AG = (Strength * 0.3) + (Dexterity * 0.2) + (Vitality * 0.1) + (Energy * 0.15) + (Leadership * 0.3)
+	elseif(Class == CLASS_SUMMONER) then
+		AG = (Strength * 0.2) + (Dexterity * 0.25) + (Vitality * 0.3) + (Energy * 0.15)
+	elseif(Class == CLASS_RAGEFIGHTER) then
+		AG = (Strength * 0.15) + (Dexterity * 0.2) + (Vitality * 0.3) + (Energy * 1.0)
+	elseif(Class == CLASS_GROWLANCER) then
+		AG = (Strength * 0.15) + (Dexterity * 0.2) + (Vitality * 0.3) + (Energy * 1.0)
+	elseif(Class == CLASS_RUNEWIZARD) then
+		AG = (Strength * 0.15) + (Dexterity * 0.2) + (Vitality * 0.3) + (Energy * 1.0)
+	elseif(Class == CLASS_SLAYER) then
+		AG = (Strength * 0.15) + (Dexterity * 0.2) + (Vitality * 0.3) + (Energy * 1.0)
+	elseif(Class == CLASS_GUNCRUSHER) then
+		AG = (Strength * 0.2) + (Dexterity * 0.25) + (Vitality * 0.3) + (Energy * 0.15)
+	elseif(Class == CLASS_LIGHTWIZARD) then
+		AG = (Strength * 0.2) + (Dexterity * 0.24) + (Vitality * 0.2) + (Energy * 0.4)
+	elseif(Class == CLASS_LEMURIAMAGE) then
+		AG = (Strength * 0.2) + (Dexterity * 0.24) + (Vitality * 0.2) + (Energy * 0.4)
+	elseif(Class == CLASS_ILLUSIONKNIGHT) then
+		AG = (Strength * 0.3) + (Dexterity * 0.5) + (Vitality * 0.2) + (Energy * 0.2)
+	end
+	
+	return AG
+end
+
 -- Only for Dark Knight, Magic Gladiator, Slayer
 function CalcTwoSameWeaponBonus(AtkMinLeft, AtkMaxLeft, AtkMinRight, AtkMaxRight, Class)
 	local OutDamageMinLeft = 0

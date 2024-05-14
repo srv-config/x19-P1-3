@@ -104,7 +104,7 @@
 	<Timing StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" />
 
 	<PickItem Enable="1">
-		<IgnoreList Enable="0"> <!-- Max 30 entries -->
+		<IgnoreList Enable="0"> <!-- Max 50 entries -->
 			<Item Cat="1" Index="1" />
 		</IgnoreList>
 		<SearchTag>

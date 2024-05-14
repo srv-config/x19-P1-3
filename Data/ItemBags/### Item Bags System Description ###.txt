@@ -154,6 +154,10 @@
 //			-1: No Option
 //			-2: Random options set (based on rates from ArtifactSystem.xml)
 //			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//		WingCore:
+//			-1: No Option
+//			-2: Random count of random options (based on rates from WingCoreOption.xml)
+//		
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Advanced config notes: The values -1, -2 and -3 are stored under Exc1 variable in ItemBagScript.lua, the options count (X) for -3 value is stored under Exc2 variable

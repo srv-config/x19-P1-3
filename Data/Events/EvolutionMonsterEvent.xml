@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -14,36 +14,36 @@
 //	Enable: Enables or disables the event
 //	EventType:
 //		~ 0: Reward issued after Card Selection from UI
-//		~ 1: Reward issued to Gremory Case (higher probability rate spawn and lower evomon stats)
-//		~ 2: Reward issued to Gremory Case (lower probability rate spawn and higher evomon stats)
+//		~ 1: Reward issued to Gremory Case (higher probability rate spawn and lower EvoMon stats)
+//		~ 2: Reward issued to Gremory Case (lower probability rate spawn and higher EvoMon stats)
 //
 // ### EvolutionMonster::EventTimeSettings::Run ###
 //	Type: Event type the timing settings apply to
 //	RewardWaitTime: Time to select a reward, applies to EventType 0 only, otherwise -1, seconds
-//	NotifyTime: Time to notify about evomon spawn or failure (counted from moment of evomon kill)
+//	NotifyTime: Time to notify about EvoMon spawn or failure (counted from moment of EvoMon kill)
 //	MonsterRegenTime: EvoMon regen time, counted from notification about successful spawn, seconds
 //
 // ### EvolutionMonster::SummoningSettings::Run ###
 //	Type: Event type the summoning settings apply to
 //	FieldEvoMonMemorizeMode: 
-//		~ 0: Do not memorize achaived EvoMon level, increases EvoMon level by 1 every successful spawn
-//		~ 1: Memorize achaived EvoMon level, increases EvoMon level by 1 every successful spawn
-//		~ 2: Partially memorizes achaived EvoMon level using following formula: EvoMonlevel = EvoMonLevelSectorValue * (MemoizedEvoMonLevel / EvoMonLevelSectorValue)
+//		~ 0: Do not memorize achieved EvoMon level, increases EvoMon level by 1 every successful spawn
+//		~ 1: Memorize achieved EvoMon level, increases EvoMon level by 1 every successful spawn
+//		~ 2: Partially memorizes achieved EvoMon level using following formula: EvoMonlevel = EvoMonLevelSectorValue * (MemoizedEvoMonLevel / EvoMonLevelSectorValue)
 //		~ 3: Increases EvoMon level differently for specific rules:
-//			If memorizedEvoMonLevel is greated or equal 30 and EvoMonLevel is lower than 69 then EvoMon Level is increased by 4 every EvoMon kill, otherwise it is increased by 1
+//			If memorizedEvoMonLevel is greater or equal 30 and EvoMonLevel is lower than 69 then EvoMon Level is increased by 4 every EvoMon kill, otherwise it is increased by 1
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Config applies to EvoMons spawned trough MonsterSpawn.xml
-//~~ Determines mode the achaived EvoMon level is memorized and defines rules of EvoMon level up
+//~~ Configuration applies to EvoMons spawned trough MonsterSpawn.xml
+//~~ Determines mode the achieved EvoMon level is memorized and defines rules of EvoMon level up
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //	SummonEvoMonMemorizeMode: 
-//		~ 0: Do not memorize achaived EvoMon level, increases EvoMon level by 1 every successful spawn
-//		~ 1: Memorize achaived EvoMon level, increases EvoMon level by 1 every successful spawn
-//		~ 2: Partially memorizes achaived EvoMon level using following formula: EvoMonlevel = EvoMonLevelSectorValue * (MemoizedEvoMonLevel / EvoMonLevelSectorValue)
+//		~ 0: Do not memorize achieved EvoMon level, increases EvoMon level by 1 every successful spawn
+//		~ 1: Memorize achieved EvoMon level, increases EvoMon level by 1 every successful spawn
+//		~ 2: Partially memorizes achieved EvoMon level using following formula: EvoMonlevel = EvoMonLevelSectorValue * (MemoizedEvoMonLevel / EvoMonLevelSectorValue)
 //		~ 3: Increases EvoMon level differently for selected EvoMon level range, >= 30 and < 69 - Level Up + 4, otherwise +1
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Config applies to EvoMons spawned trough 14,244 scroll
-//~~ Determines mode the achaived EvoMon level is memorized and defines rules of EvoMon level up
+//~~ Configuration applies to EvoMons spawned trough 14,244 scroll
+//~~ Determines mode the achieved EvoMon level is memorized and defines rules of EvoMon level up
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //	EvoMonLevelSectorValue: Constant value used in formula of FieldEvoMonMemorizeMode = 2, see description above
@@ -70,8 +70,8 @@
 //	AppearType1: Skill count use 1, maximum EvoMon spawn level to apply AppearType1, must be lower than AppearType2
 //	AppearType2: Skill count use 2, maximum EvoMon spawn level to apply AppearType2, must be higher than AppearType1 and lower than AppearType3
 //	AppearType3: Skill count use 3, maximum EvoMon spawn level to apply AppearType3, must be higher than ApeearType2, if AppearType3 is set to value lower than max possible of 255 and spawn level is higher or equal to AppearType3 value then skill count use is 4.
-//	ChangePro: Value used to calculate probavility of level up of EvoMonSpawn
-//	ProV: Value used to calculate probavility of level up of EvoMonSpawn
+//	ChangePro: Value used to calculate probability of level up of EvoMonSpawn
+//	ProV: Value used to calculate probability of level up of EvoMonSpawn
 //		~ EventType 0: LevelUpProb = ((25500 * ChangePro) / sqrt(EvoMonLevel - 1.0) * (ProV * 100.0)) / 10000
 //		~ EventType 1: LevelUpProb = 10 * (((100 * ChangePro) - EvoMonLevel * (ProV * 100.0)) / 10)
 //		~ EventType 2: LevelUpProb = 10 * (((100 * ChangePro) - EvoMonLevel * (TempProbability * 100.0)) / 10)
@@ -82,7 +82,7 @@
 //
 //	ChangeSpecPro: Probability chance to spawn special EvoMon, n/10000
 //	DisappearTime: Value used to calculate EvoMon disappear time after spawn
-//	DisappearTimeV: Value used to calculaye EvoMon disappear time after spawn
+//	DisappearTimeV: Value used to calculate EvoMon disappear time after spawn
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ DisappearTime = 1000 * (DisappearTime + DisappearTimeV * (EvoMonLevel - 1))
@@ -94,13 +94,6 @@
 // ### EvolutionMonster::EventScoreSettings::Run ###
 //	Type: Event type the score settings apply to
 //	EvoMonScoreClass: EvoMon class to apply score for, 681 or 690
-//	EvoMonScoreType: Type of score to apply:
-//		~ 0: Max EvoMon level achaived
-//		~ 1: Number of killed EvoMons
-//		~ 2: Total damaged caused to EvoMons
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Change of the value require valid configuration of the banner display in ScoreBanner.xml
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // ### EvolutionMonster::MonsterMapLevel::EvoMon ###
 //	ID: EvoMon index the setting apply to
@@ -111,7 +104,7 @@
 //	Index: Unique reward index
 //	ItemCat: Reward item category
 //	ItemIndex: Reward item index
-//	RewardProbX: Probability to get specifiet reward, n/10000
+//	RewardProbX: Probability to get specified reward, n/10000
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Specific RewardProbX in column (for all reward boxes) must sum up to 10000
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,9 +137,9 @@
 	</MonsterSettings>
 
 	<EventScoreSettings>
-		<Run Type="0" EvoMonScoreClass="681" EvoMonScoreType="0" />
-		<Run Type="1" EvoMonScoreClass="681" EvoMonScoreType="0" />
-		<Run Type="2" EvoMonScoreClass="681" EvoMonScoreType="0" />
+		<Run Type="0" EvoMonScoreClass="681" />
+		<Run Type="1" EvoMonScoreClass="681" />
+		<Run Type="2" EvoMonScoreClass="681" />
 	</EventScoreSettings>
 	
 	<!-- EvolutionMonsterMapLevel.txt -->
