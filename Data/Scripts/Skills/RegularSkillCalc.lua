@@ -6,7 +6,7 @@
 -- // == File is a part of IGCN Group MuOnline Server files.
 -- // ============================================================
 
--- RegularSkillCalc Control Script, Lua v5.2
+-- RegularSkillCalc Control Script, Lua v5.3
 -- Skill Configuration (Result, Time) - Can be modified to adjust for own needs
 
 -- SkillID refers to Index of skill in \Data\Skills\SkillList.txt
@@ -578,9 +578,23 @@ function GladiatorHavokSpear(InDamage, Strength, Dexterity, Vitality, Energy, Ba
     return OutDamage
 end
 
--- SkillID: 60 ,61, 62, 65, 74, 78, Force, Fire Burst, Earthshake, Electric Spike, Fire Blast, Fire Scream
-function Lord_CalcSkillBonus(SkillID, InDamage, Strength, Energy, Command)
-	local OutDamage = ( InDamage * ( ( Energy / 20 + 200 ) ) ) / 100
+-- SkillID: 60, Force
+function LordForceCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
+	local OutDamage = (InDamage * (( Energy / 20 + 200 ))) / 100
+	
+	return OutDamage
+end
+
+-- SkillID: 61, Fire Burst
+function LordFireBurstCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
+	local OutDamage = (InDamage * (( Energy / 20 + 200 ))) / 100
+	
+	return OutDamage
+end
+
+-- SkillID: 62, Earth-Shake
+function LordEarthShakeCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
+	local OutDamage = (InDamage * (( Energy / 20 + 200 ))) / 100
 	
 	return OutDamage
 end
@@ -593,8 +607,29 @@ function DarkLordCriticalDamage(Index, TargetIndex, TargetClass, Command, Energy
 	return SkillEffect, SkillTime
 end
 
+-- SkillID: 65, Electric Spike
+function LordElectricSpikeCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
+	local OutDamage = (InDamage * (( Energy / 20 + 200 ))) / 100
+	
+	return OutDamage
+end
+
+-- SkillID: 74, Fire Blast
+function LordFireBlastCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
+	local OutDamage = (InDamage * (( Energy / 20 + 200 ))) / 100
+	
+	return OutDamage
+end
+	
+-- SkillID: 78, Fire Scream
+function LordFireScreamCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
+	local OutDamage = (InDamage * (( Energy / 20 + 200 ))) / 100
+	
+	return OutDamage
+end
+
 -- SkillID: 238, Chaotic Diseier
-function ChaoticDiseierCalc(InDamage, Energy)
+function LordChaoticDiseierCalcDamage(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = InDamage * (Energy / 25 + 200) / 100
 	
 	return OutDamage
