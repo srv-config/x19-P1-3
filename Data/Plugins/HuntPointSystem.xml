@@ -3,20 +3,19 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
-//~~ General Information ~~
-//	HuntPoint system is an mixutre of PVP and PVE addition to the MU Online Game. The purpose of this system is to add ability for players
+//	HuntPoint system is an mixture of PVP and PVE addition to the MU Online Game. The purpose of this system is to add ability for players
 //	to improve their character by accomplishing special tasks and battle each other for more points.
-//	Once the Hunt Point system is activated, the player Receives special buff with a tooltip.
+//	Once the Hunt Point system is activated, the player Receives special buff with a tool-tip.
 //	Tooltip that contains information of player ability improvements that are gained by the Hunt Point system and its current HuntPoints/Inactive points.
 //	Every player starts by default with 2500 HuntPoints. They can be spent by killing monsters on predefined maps for each of the ability.
 //	Once player moves to the configured map he can hover the Special hunt point Buff and the information of ability that can be improved in this map will be displayed.
 //	The players can use /huntbattle command to be moved to special PVP area defined by server administrator. In this area anyone who joins can fight each other to steal their points.
-//	HuntPoint system resets each week and transforms part of old points into Inactive points so the leaders of last week will have slight advantage untill he loses it by failing battles.
+//	HuntPoint system resets each week and transforms part of old points into Inactive points so the leaders of last week will have slight advantage until he loses it by failing battles.
 //	The abilities can be slightly boosted by completing range of quests defined in this file.
 //	Player can cancel one quest and start another if he decides to change his strategy to improve another ability
 //	Data about Players, their huntpoints and boosts are stored in MuOnline DB. IGC_HuntPoint table 
@@ -25,13 +24,13 @@
 //	Enabled = Enable/Disable system
 //
 // ### HuntPointSystem::General ###
-//	GSCodeActive: Active gameserver codes for the system to be working (Syntax code,code,code)
-//	MonsterDivInactive: How many monsters have to kill to apply points from Inactive Huntpoints to Buff (Example 3 monsters to consume 1 Inactive point)
-//	MonsterDivActive: How many monsters have to kill to apply points from normal HuntPoints (Example 10 monsters to consume 1 Huntpoint)
+//	GSCodeActive: Active game server codes for the system to be working (Syntax code,code,code)
+//	MonsterDivInactive: How many monsters have to kill to apply points from Inactive Hunt-Points to Buff (Example 3 monsters to consume 1 Inactive point)
+//	MonsterDivActive: How many monsters have to kill to apply points from normal HuntPoints (Example 10 monsters to consume 1 Hunt-Point)
 //	BuffRaffleDiv: Raffle divisor
-//	BuffPercentSubAdd: Value to substract/add to next buff
+//	BuffPercentSubAdd: Value to subtract/add to next buff
 //	BuffRaffleAfterMaxMonster: Continue raffle after max monster is done
-//	StarterhuntPoint: Base huntpoints
+//	StarterhuntPoint: Base hunt-points
 //	MaxDayMonsterPerVip: Max Daily monsters per VIP type
 //	WeekMonsterCount: How many monsters per week one can kill to gain points
 //	WeekTransformPercent: How many percent of HuntPoints will be transformed to Inactive points per week
@@ -43,7 +42,7 @@
 //	EffectType: Unused
 //	HuntDiv: Divisor from formula (how much effect is given based on hunt point %)
 //	Max: Max value of effect
-//	IsPercent: is the value Percent based
+//	IsPercent: Whether or not, treat the value as percent, 0/1
 //	MinWorkPercent: Minimum Hunt Percent to activate buff
 //	MinLevel: Minimum level to work
 //	MinMasterLevel: Minimum master level to work
@@ -55,10 +54,10 @@
 //	MinLevel: Minimum level to participate in battle
 //	MinMasterLevel: Minimum Master level to participate in battle
 //	MinReset: Minimum Reset to participate in battle.
-//	MinMasterReset: Minimum Grandreset to participate in Battle
+//	MinMasterReset: Minimum Grand reset to participate in Battle
 //	MinHunts: Minimum hunt point to join
 //	RenewBattle: Renew battle after death
-//	InvisibleTime: Duration of invisbility upon joining the battle
+//	InvisibleTime: Duration of invisibility upon joining the battle
 //	RemovePkTime: Remove PK Time duration
 //	RemoveTime: Remove player from battle time
 //	DeathHuntPercent: How many percent of HuntPoints will be lost after death
@@ -73,20 +72,20 @@
 //
 // ### HuntPointSystem::ItemQuest ###
 //	Enabled: Is Quest System enabled
-//	MaxBuffs: How many quests can be completed by one character untill he must cancel one
+//	MaxBuffs: How many quests can be completed by one character until he must cancel one
 //
 // ### HuntPointSystem::ItemQuest::Item ###
 //	Name: Quest name (used by command and to print info)
 //	MinReset: Minimum resets to start quest
-//	Items: ItemCategory * 512 + Item Index (from ItemList), seperated by coma, 5 items per quest to be collected) Quest is completed by command only when all items are located in inventory, the items are removed after completing quest and the reward is given
+//	Items: ItemCategory * 512 + Item Index (from ItemList), separated by coma, 5 items per quest to be collected) Quest is completed by command only when all items are located in inventory, the items are removed after completing quest and the reward is given
 //
 // ### HuntPointSystem::ItemQuest::Item::Points::Point ### 
 //	Id: Which Buff will be improved (from <BuffSettings>
 //	Points: Bonus value to be given to the buff
 //
 // ### HuntPointSystem::ItemQuest::Item::Language::Text ###
-//	Id: 
-//	Text: 
+//	Id: Unique text ID
+//	Text: Text to display
 //
 // STRICTLY NO COMMENTS INSIDE TAGS
 //

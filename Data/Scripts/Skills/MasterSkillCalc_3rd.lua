@@ -27,6 +27,76 @@ CLASS_LIGHTWIZARD									  = 11	-- Light Wizard, Shining Wizard, Luminous Wizar
 CLASS_LEMURIAMAGE									  = 12	-- Lemuria Mage, Warmage, Archmage, Mystic Mage
 CLASS_ILLUSIONKNIGHT								  = 13	-- Illusion Knight, Mirage Knight, Illusion Master, Mystic Knight
 
+-- SkillID: 378, 483, Flame Strengthener
+function FlameCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 379, 480, Lightning Strengthener
+function LightningCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 381, 486, Inferno Strengthener
+function InfernoCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 382, 484, Blast Strengthener
+function BlastCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 384, Poison Strengthener
+function PoisonCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 387, Decay Strengthener
+function DecayCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 388, Hell Fire Strengthener
+function HellFireCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 389, 489, Ice Strengthener
+function IceCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 390, Meteor Strengthener
+function MeteorCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 391, Ice Storm Strengthener
+function IceStormCalc_Master(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
 -- SkillID: 385, 487, Evil Spirit Strengthener
 function EvilSpirit_MasterLevel1_Calc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = 0
@@ -467,14 +537,14 @@ function ElfPartyHealing(Strength, Dexterity, Vitality, Energy)
 end
 
 -- SkillID: 430, Bless - (High ELf)
-function ElfBless_Level1(Energy)
+function ElfBless_Level1(Index, TargetIndex, TargetClass, Energy)
 	local SkillEffect = Energy / 100
 	
 	return SkillEffect
 end
 
 -- SkillID: 433, Bless Strengthener - (High Elf)
-function ElfBless_Level2(Energy)
+function ElfBless_Level2(Index, TargetIndex, TargetClass, Energy)
 	local SkillEffect = Energy / 100
 	
 	return SkillEffect
@@ -595,14 +665,14 @@ function EarthPrison_Level2()
 end
 
 -- SkillID: 508, Fire Burst Strengthener - (Lord Emperor)
-function FireBurst_MasterLevel1_Lord(InDamage, Energy)
+function FireBurst_MasterLevel1_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage
 end
 
 -- SkillID: 509, Force Wave Strengthener - (Lord Emperor)
-function ForceWave_Master_Lord(InDamage, Energy)
+function ForceWave_Master_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage
@@ -616,8 +686,8 @@ function DarkLordCriticalDamage_Level1(Index, TargetIndex, TargetClass, Command,
 	return SkillEffect, SkillTime
 end
 
--- SkillID: 512, Earthshake Strengthener - (Lord Emperor)
-function EarthShake_MasterLevel1_Lord(InDamage, Energy)
+-- SkillID: 512, Earth-shake Strengthener - (Lord Emperor)
+function EarthShake_MasterLevel1_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage
@@ -648,28 +718,28 @@ function DarkLordCriticalDamage_Level4(Index, TargetIndex, TargetClass, Command,
 end
 
 -- SkillID: 518, Fire Scream Strengthener - (Lord Emperor)
-function FireScream_MasterLevel1_Lord(InDamage, Energy)
+function FireScream_MasterLevel1_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage
 end
 
 -- SkillID: 520, Fire Scream Mastery - (Lord Emperor)
-function FireScream_MasterLevel2_Lord(InDamage, Energy)
+function FireScream_MasterLevel2_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage
 end
 
 -- SkillID: 519, Electric Spark Strengthener - (Lord Emperor)
-function ElectricSpark_Master_Lord(InDamage, Energy)
+function ElectricSpark_Master_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage
 end
 
 -- SkillID: 523, Chaotic Diseier Strengthener - (Lord Emperor)
-function ChaoticDiseier_Master_Lord(InDamage, Energy)
+function ChaoticDiseier_Master_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = InDamage * (Energy / 25 + 200) / 100
 	
 	return OutDamage

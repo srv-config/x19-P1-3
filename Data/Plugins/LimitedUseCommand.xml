@@ -46,9 +46,10 @@ EventKind:
 		</Lines>
 		
 		<Strings>
-			<String Id="0" Text=" [%s] Next Event time In [%d] Minutes"/>
+			<String Id="0" Text=" [%s] Next Event time In [%d] Minutes" />
 			<String Id="1" Text=" [%s] Event is" />
 			<String Id="2" Text="Live" />
+			<String Id="3" Text=" [%s] Next Event in [%d] days" />
 		</Strings>
 	</EventInfoCommandData>
 	

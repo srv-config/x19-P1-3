@@ -3,16 +3,21 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
 // ### IceWindValley ###
 //	Enable: Deactivates or activates the event: 0/1
-//	ServerCode: Server code to run the event on, regular game sercers only, see MapServerInfo.xml
-//	ActiveDay: Day of week the event is active on
-//		~ -1: any day
+//	ServerCode: Server code to run the event on, regular game servers only, see MapServerInfo.xml
+//
+//	Type: Event registration mode:
+//		0: No application required, everyone can participate
+//		1: Registration required via command /regicewind
+//
+// ### IceWindValley::Schedule::Start ###
+//	DayOfWeek: Day of week the event is active on
 //		~ 0: Sunday
 //		~ 1: Monday
 //		~ 2: Tuesday
@@ -21,17 +26,12 @@
 //		~ 5: Friday
 //		~ 6: Saturday
 //
-//	Type: Event registration mode:
-//		0: No application required, everyone can participate
-//		1: Registration required via command /regicewind
-//
-// ### IceWindValley::StartTime ###
+//	Reg: Registration hour, 0-23
+//	Reg: Registration minute, 0-59
+//	Reg: Time the registration period last, minutes
 //	Hour: Start hour, 0-23
 //	Minute: Start minute, 0-59
-//	Duration: Even duration, minutes
-//	RegistrationHour: Registration hour, 0-23
-//	RegistrationMinute: Registration minute, 0-59
-//	RegistrationDuration: Time the registration period last, minutes
+//	Duration: Event duration, minutes
 //
 // ### IceWindValley::ApplicationConditions ###
 //	MinGuildMember: Minimum guild members to register to the event
@@ -103,7 +103,7 @@
 //	BuffEffectValue: Buff Effect Value
 //	EventBagReward: If set to 1 guild member will be rewarded an item from Event_IWC_GuildMaster.xml bag
 //
-// ### IceWindValley::RewardsLeader ###
+// ### IceWindValley::RewardsMember ###
 //	EqualWC: Amount of WCoins to reward divided by number of guild members participating the event
 //	EqualGP: Amount of Goblin Points to reward divided by number of guild members participating the event
 //	EqualRuud: Amount of Ruud to reward divided by number of guild members participating the event
@@ -132,8 +132,17 @@
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
-<IceWindValley Enabled="0" ServerCode="0" ActiveDay="-1" Type="1">
-	<StartTime Hour="8" Minute="0" Duration="30" RegistrationHour="7" RegistrationMinute="50" RegistrationDuration="5" />
+<IceWindValley Enabled="0" ServerCode="0" Type="1">
+	<Schedule>
+		<Start DayOfWeek="0" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="1" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="2" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="3" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="4" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="5" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="6" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+	</Schedule>
+	
 	<ApplicationConditions MinGuildMember="1" MaxGuildMember="10" WCoin="0" GoblinPoint="0" Ruud="0" Contribution="0" Zen="0"/>
 	<Settings EventStartMoveToDevias="0" MoveGateID="22" BlockMoveDevias3="1" HideUnregisteredPlayer="1" MaxLeaveTime="30" TotalSitdownTime="60" GuildAssistantCanSit="1" GuildMemberCanSit="1" PlayType="0" VibrationEffect="1" VibrationDuration="10" ApplyFlameEffect="1"/>
 

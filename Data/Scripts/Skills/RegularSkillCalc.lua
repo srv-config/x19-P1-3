@@ -28,6 +28,55 @@ CLASS_LIGHTWIZARD									  = 11
 CLASS_LEMURIAMAGE									  = 12
 CLASS_ILLUSIONKNIGHT								  = 13
 
+-- SkillID: 1, Poison
+function PoisonCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 2, Meteorite
+function MeteoriteCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 3, Lightning
+function LightningCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 4, Fire Ball
+function FireBallCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 5, Flame
+function FlameCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 7, Ice
+function IceCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 8, Twister
+function TwisterCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
 -- SkillID: 9, Evil Spirit
 function EvilSpiritCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = 0
@@ -40,6 +89,62 @@ function EvilSpiritCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
 		OutDamage = InDamage
 	end
  
+ return OutDamage
+end
+
+-- SkillID: 10, Hell Fire
+function HellFireCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 11, Power Wave
+function PowerWaveCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 12, Aqua Beam
+function AquaBeamCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 13, Comet Fall
+function CometfallCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 14, Inferno
+function InfernoCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 17, Energy Ball
+function EnergyBallCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 38, Decay
+function DecayCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
+ return OutDamage
+end
+
+-- SkillID: 39, Ice Storm
+function IceStormCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+
  return OutDamage
 end
 

@@ -111,13 +111,13 @@ function WindSoul_4thEnchant_Lord(InDamage, Strength, Dexterity, Vitality, Energ
 	return OutDamage
 end
 
-function ChaoticDiseier_4thEnchant_Lord(InDamage, Energy)
+function ChaoticDiseier_4thEnchant_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = InDamage * (Energy / 25 + 200) / 100
 	
 	return OutDamage
 end
 
-function FireBurst_4thEnchant_Lord(InDamage, Energy)
+function FireBurst_4thEnchant_Lord(InDamage, Strength, Dexterity, Vitality, Energy, Command)
 	local OutDamage = (InDamage * (((Energy) / 20 + 200))) / 100;
 	
 	return OutDamage

@@ -3,13 +3,13 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Changes to the file require modification of GuardianMix.txt on client side (Lanf.mpr)
+//~~ Changes to the file require modification of GuardianMix.txt on client side (Lang.mpr)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // ### GuardianItemMix::PetItemCreation::Mix ###
@@ -21,7 +21,7 @@
 //	SubItemCatX: Category of sub-material item
 //	SubItemIndexX: Index of sub-material item
 //	SubItemDurX: Durability of sub-material item
-///	ReqMoney: Money required for the mix, Zen
+//	ReqMoney: Money required for the mix, Zen
 //	SuccessRate: Mix success rate, n/1000000
 //	ResultItemCat: Result item category
 //	ResultItemIndex: Result item index
@@ -36,7 +36,7 @@
 //	SubItemCatX: Category of sub-material item
 //	SubItemIndexX: Index of sub-material item
 //	SubItemDurX: Durability of sub-material item
-///	ReqMoney: Money required for the mix, Zen
+//	ReqMoney: Money required for the mix, Zen
 //	SuccessRate: Mix success rate, n/1000000
 //	ResultItemCat: Result item category
 //	ResultItemIndex: Result item index
@@ -58,6 +58,9 @@
 //	ReqGuardianNum: Guardian item number:
 //		1: 12,471
 //		2: 12,483-484
+//		3: 12,75-76
+//		4: 12, 83-84
+//		5: 12, 93-94
 //
 //	ItemCat: Item category
 //	ItemIndex: Item index
@@ -77,14 +80,11 @@
 //	ResultItemIndex: Result item index
 //	ResultItemLevel: Result item level, 0-15
 //
-// ### GuardianItemMix::UpgradeSpecial::Result ###
+// ### GuardianItemMix::GuardianItemUpgradeSpecial::Result ###
 //	ReqGuardianNum: Minimum level of upgrade mix, refers to ID attribute of GuardianItemUpgrade section
-//	ItemCat: Special reward item category
-//	ItemIndex: Special reward item index
+//	ItemCat: Category of special item reward
+//	ItemIndex: Index of special item reward
 //	Probability: Chance to obtain special reward, n/1000000
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Probability of (rare) items appearing as a result when combining guardian upgrades
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
@@ -123,6 +123,7 @@
 		<Mix ReqGuardianNum="3" SubItemCat="14" SubItemIndex="470" MaxOptCount="5" />
 		<Mix ReqGuardianNum="4" SubItemCat="14" SubItemIndex="470" MaxOptCount="5" />
 		<Mix ReqGuardianNum="5" SubItemCat="14" SubItemIndex="470" MaxOptCount="5" />
+		<Mix ReqGuardianNum="6" SubItemCat="14" SubItemIndex="470" MaxOptCount="5" />
 	</GuardianItemOptChange>
 	
 	<GuardianItemUpgrade>																							
@@ -161,11 +162,12 @@
 		<Mix ID="32" MainItemCat="12" MainItemIndex="84" MainItemLevel="13" MainItemDur="1" SubItemCat1="20" SubItemIndex1="119" SubItemDur1="1" SubItemCat2="14" SubItemIndex2="13" SubItemDur2="20" SubItemCat3="14" SubItemIndex3="14" SubItemDur3="20" SubItemCat4="12" SubItemIndex4="15" SubItemDur4="1" SubItemCat5="14" SubItemIndex5="22" SubItemDur5="1" ReqMoney="0" SuccessRate="800000" ResultItemCat="12" ResultItemIndex="93" ResultItemLevel="0" />
 		<Mix ID="33" MainItemCat="12" MainItemIndex="84" MainItemLevel="14" MainItemDur="1" SubItemCat1="20" SubItemIndex1="119" SubItemDur1="1" SubItemCat2="14" SubItemIndex2="13" SubItemDur2="20" SubItemCat3="14" SubItemIndex3="14" SubItemDur3="20" SubItemCat4="12" SubItemIndex4="15" SubItemDur4="1" SubItemCat5="14" SubItemIndex5="22" SubItemDur5="1" ReqMoney="0" SuccessRate="900000" ResultItemCat="12" ResultItemIndex="93" ResultItemLevel="0" />
 		<Mix ID="34" MainItemCat="12" MainItemIndex="84" MainItemLevel="15" MainItemDur="1" SubItemCat1="20" SubItemIndex1="119" SubItemDur1="1" SubItemCat2="14" SubItemIndex2="13" SubItemDur2="20" SubItemCat3="14" SubItemIndex3="14" SubItemDur3="20" SubItemCat4="12" SubItemIndex4="15" SubItemDur4="1" SubItemCat5="14" SubItemIndex5="22" SubItemDur5="1" ReqMoney="0" SuccessRate="1000000" ResultItemCat="12" ResultItemIndex="93" ResultItemLevel="0" />
-	</GuardianItemUpgrade>																																												
-	<UpgradeSpecial>
+	</GuardianItemUpgrade>
+	
+	<GuardianItemUpgradeSpecial>
 		<Result ReqGuardianNum="2" ItemCat="12" ItemIndex="484" Probability="100" />
 		<Result ReqGuardianNum="3" ItemCat="12" ItemIndex="76" Probability="100" />
 		<Result ReqGuardianNum="4" ItemCat="12" ItemIndex="84" Probability="100" />
 		<Result ReqGuardianNum="5" ItemCat="12" ItemIndex="94" Probability="100" />
-	</UpgradeSpecial>
+	</GuardianItemUpgradeSpecial>
 </GuardianItemMix>

@@ -874,6 +874,14 @@
 		<Msg ID="848" Text="Your class is not allowed to use this flag." />
 		<Msg ID="849" Text="Adding the Luck option failed." />
 		<Msg ID="850" Text="The jewel cannot be used with this item." />
+		<Msg ID="851" Text="You cannot enter the Chaos Castle while having flag active." />
+		<Msg ID="852" Text="%H:%M:%S (%d-%m-%Y)" /> <!-- auto-reset display time format -->
+		<Msg ID="853" Text="Auto Reset is already active since %s" />
+		<Msg ID="854" Text="Auto Reset Activated." />
+		<Msg ID="855" Text="You do not minimum VIP level to use auto reset." />
+		<Msg ID="856" Text="Auto Reset deactivated." />
+		<Msg ID="857" Text="Auto Reset is not active." />
+		<Msg ID="858" Text="Manual reset is not available when auto-reset is active." />
 	</Message>
 	<Map>
 		<Msg ID="0" Text="Lorencia" />
